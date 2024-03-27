@@ -43,10 +43,10 @@ export default {
 						maxWidth: '768px',
 					},
 					'@screen lg': {
-						maxWidth: '1126px',
+						maxWidth: '1240px',
 					},
 					'@screen xl': {
-						maxWidth: '1126px',
+						maxWidth: '1240px',
 					},
 				},
 			})

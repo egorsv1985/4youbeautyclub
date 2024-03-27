@@ -1,54 +1,14 @@
-<header
-	class="fixed py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10">
-	<div class="container px-2">
-		<div class="z-40 flex items-center justify-between pb-3 border-b border-b-gray_border">
-			<div class="w-1/3 mr-3 sm:w-1/4 lg:w-1/6 max-[400px]:w-1/2">
-				<a href="/" class="block max-w-full text-center">
-					<img src="@img/logo.png" alt="logo" class="max-w-full" width="160" height="34" />
-				</a>
-			</div>
-			<div class="hidden w-1/2 mr-3 md:mr-7 md:w-1/5 sm:block">
-				<button id="menuDropdownButton" data-dropdown-toggle="menuDropdown" data-dropdown-trigger="hover"
-					class="gap-2 bg-white rounded-[5rem] px-8 py-4 text-center flex items-center" type="button">
-				
-					<span class="text-base font-medium text-gray_500 font-display">
-						Услуги
-					</span>
-				</button>
-				<!-- Dropdown menu -->
-				
-			</div>
-			<div class="lg:w-[12.6%] md:w-1/6 sm:w-1/5 w-1/3 md:mr-7 mr-3 max-[400px]:hidden">
-				
-			</div>
-			<div class="hidden w-1/4 mr-7 lg:w-1/6 lg:block">
-				
-			</div>
-			<div class="hidden w-1/6 lg:block">
-				<button data-modal-target="callback-modal" data-modal-toggle="callback-modal"
-					class="relative items-center justify-start inline-block px-8 py-4 overflow-hidden font-medium transition-all border rounded-full shadow border-gray_border bg-gray_light hover:bg-white group"
-					type="button">
-					<span
-						class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-					<span
-						class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-gray_500">Работать
-						с нами</span>
-				</button>
-				
-
-			</div>
-			<div class="w-1/4 md:w-1/12">
-				<button data-collapse-toggle="mobile-menu-2" type="button"
-					class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none "
-					aria-controls="mobile-menu-2" aria-expanded="true">
-				
-					<span class="">Меню</span>
-				</button>
-
+<header class="fixed pt-8 bg-black header z-[9999] left-0 right-0 top-0 ">
+	 <div class="bg-white">
+		<div class="container ">
+			<div class="z-40 flex items-center gap-[70px] py-6 ">
+				<div class="">
+					<a href="/" class="block max-w-full text-center">
+						<img src="@img/logo.png" alt="logo" class="max-w-full" width="121" height="54" />
+					</a>
+				</div>
+				@@include('../blocks/_menu.html')
 			</div>
 		</div>
-		@@include('../blocks/_menu.html')
-
-
 	</div>
 </header>
