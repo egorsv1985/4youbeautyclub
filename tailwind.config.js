@@ -7,7 +7,11 @@ export default {
 				Manrope: ['Manrope', 'sans-serif'],
 			},
 		},
-		
+		lineHeight: {
+			tight: '1.3',
+			normal: '1',
+		},
+
 		colors: {
 			black: '#212121',
 			creamy: '#ECD9C5',			

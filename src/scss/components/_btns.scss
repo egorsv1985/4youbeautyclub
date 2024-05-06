@@ -1,0 +1,15 @@
+.btn-arrow:after {
+	transition: background-position 0.3s;
+	z-index: 1;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.8rem;
+	height: 1rem;
+	width: 3.1rem;
+	background-size: 200% auto !important;
+	background: url('/images/icons/btn-arrow.svg') 0 50% repeat-x;
+}
+.btn-arrow:hover:after {
+	background-position: 100% 50%;
+}
