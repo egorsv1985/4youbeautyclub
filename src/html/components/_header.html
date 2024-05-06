@@ -1,5 +1,5 @@
-<header class="fixed pt-8 bg-black header z-[9999] left-0 right-0 top-0 ">
-	 <div class="bg-white">
+<header class=" absolute border-t-[32px] z-50  border-black w-full bg-black header z-[9999] left-0 right-0 top-0 ">
+	<div class="bg-white">
 		<div class="container ">
 			<div class="z-40 flex items-center gap-[70px] py-6 ">
 				<div class="">
@@ -8,6 +8,13 @@
 					</a>
 				</div>
 				@@include('../blocks/_menu.html')
+				<button data-modal-target="callback-modal" data-modal-toggle="callback-modal"
+					class="relative items-center justify-center inline-block px-8 py-4 overflow-hidden font-medium transition-all bg-transparent border border-black hover:bg-black group"
+					type="button">
+					<span
+						class="relative w-full text-2xl leading-tight text-black transition-colors duration-500 ease-in-out group-hover:text-white text-nowrap ">Оставить
+						заявку</span>
+				</button>
 			</div>
 		</div>
 	</div>

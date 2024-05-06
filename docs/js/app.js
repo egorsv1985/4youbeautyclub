@@ -44,6 +44,23 @@ $(document).ready(function () {
 //    }
 //   })
 
+$(document).ready(function () {
+	var borderTop = $('header').css('border-top-width').replace('px', '')
+	$(window).scroll(function (event) {
+		var body = $('body').scrollTop()
+		if (body == 0) {
+			var body = $('html').scrollTop()
+		}
+		var top = $('.page').offset().top + Number(borderTop)
+		if (body > top) {
+			$('header').addClass('fixed')
+		} else {
+			$('header').removeClass('fixed')
+		}
+		
+	})
+})
+
 ymaps.ready(function () {
 	// Создаем карту и указываем центр и масштаб
 	var myMap = new ymaps.Map('map', {
