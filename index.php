@@ -10,6 +10,9 @@ $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/services-main.ph
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/news-main.php");
 ?>
+<?
+$APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/specialists-main.php");
+?>
 
  
  <?
