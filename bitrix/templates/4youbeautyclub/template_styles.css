@@ -415,6 +415,41 @@ position: absolute;
 .carousel-control-prev {
 	left: -11%;
 }
+.news-right{
+	background-color: #212121;
+}
+.news-item{
+	width: 100%;
+	color: #fff;
+	border: 1.5px solid rgba(255, 255, 255, 0.8);
+	
+}
+.news-right .news-item.max-content{
+	max-width: max-content;
+	
+}
+.news-item p{
+	
+	opacity: .8;
+}
+.news-right .cover{
+	position: absolute;
+	bottom: 18%;
+    left: 5%;
+    height: 110%;
+    width: 50%;
+	background: url('images/blog.png');
+	background-size: cover;
+}
+.news-right::before{
+	content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 100%;
+    background: #212121;
+    width: 100vw;
+}
 .menu-contaner .left-menu {
 	position: absolute;
 	top: 0;
