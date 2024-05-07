@@ -12,7 +12,8 @@ $asset->addCss('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&d
 $asset->addJs(SITE_TEMPLATE_PATH . '/libs/jquery-3.7.1/jquery-3.7.1.js');
 $asset->addCss(SITE_TEMPLATE_PATH . '/libs/bootstrap-5.3.3-dist/css/bootstrap.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/libs/bootstrap-5.3.3-dist/js/bootstrap.js');
-
+$asset->addJs(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.js');
+$asset->addCss(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 ?>
 <!DOCTYPE html>
@@ -55,7 +56,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 				</div>
 			</header>
 <?if (TYPE_PAGE == 'MAIN'):?>
-			<div class="pb-5 main-offer">
+			<section class="pb-5 main-offer">
 				<div class="container mb-5 position-relative">
 					<div class="row">
 						<div class="col-md-6 offer-text">
@@ -81,8 +82,8 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						<div class="item ico-studio">студия красоты</div>
 					</div>
 				</div>
-			</div>
-			<div class="py-5 about-us">
+			</section>
+			<section class="py-5 about-us">
 				<div class="container mb-5 position-relative">
 					<div class="row gx-0">
 						<div class="col-md-6 position-relative">
@@ -99,7 +100,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"main-advantages", 
@@ -188,7 +189,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 	)
 );?>
 <?$APPLICATION->ShowViewContent('topPage');?>
-			<div class="py-5 head-title">
+			<section class="py-5 head-title">
 				<div class="container">
 					<div class="row">
 						<div class="col text-uppercase">
@@ -197,6 +198,6 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						<?$APPLICATION->ShowViewContent('topColRight');?>
 					</div>
 				</div>
-			</div>
+			</section>
 			<div class="container">
 <?endif;?>

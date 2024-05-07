@@ -11,12 +11,8 @@ $(document).ready(function() {
 		}	else {
 			$('header').removeClass('fixed');
 		}
-		var e = document.querySelectorAll('input[type="tel"]')
-		jQuery(e).inputmask({
-			mask: ['+375 (99) 999 99 99', '8 (99) 999 99 99'],
-			greedy: !1,
-			placeholder: '_',
-		})
+		
+
 		/*
 		var headerHeight = $('header').height();
 		var topMenuContaner = $('.menu-contaner').offset().top;
