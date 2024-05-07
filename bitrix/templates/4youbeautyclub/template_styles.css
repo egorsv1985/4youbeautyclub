@@ -383,9 +383,9 @@ footer hr {
     left: 6%;
     max-width: 26.25rem;
 }
-.services-slider img{
+/* .carousel-item .row{
 	height: 350px;
-}
+} */
 .carousel-control-next-icon{
 	
 }
