@@ -7,6 +7,9 @@ $APPLICATION->SetTitle("Главная");
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/services-main.php");
 ?>
+<?
+$APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/news-main.php");
+?>
 
  
  <?
