@@ -20,7 +20,8 @@ $('.specialists__slider').slick({
 	cssEase: 'linear',
 	slidesToShow: 3,
 	slidesToScroll: 1,
-	
+	appendDots: $('.slick__dots'),
+
 	responsive: [
 		{
 			breakpoint: 900,
