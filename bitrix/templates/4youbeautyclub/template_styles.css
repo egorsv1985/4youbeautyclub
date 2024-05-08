@@ -536,3 +536,29 @@ button {
 	text-decoration: none;
 	transition: all 0.2s ease-out;
 }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	border: none;
+}
+.nav-tabs{
+	border: none;
+}
+.specialists-main .tab-label:before{
+	width: 3.5rem;
+	margin-right: 1.25rem;
+}
+.nav-tabs{
+	gap: 4.625rem;
+}
+.nav-tabs .nav-link{
+	opacity: 0.3;
+	color: #000;
+}
+.nav-tabs .nav-link.active{
+	opacity: 1;
+}
+.slider__name{
+	letter-spacing: .0625rem;
+}
+.slider__post{
+	opacity: 0.8;
+}
