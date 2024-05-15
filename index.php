@@ -16,6 +16,9 @@ $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/specialists-main
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/instruments.php");
 ?>
+<?
+$APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/products.php");
+?>
 
  
  <?

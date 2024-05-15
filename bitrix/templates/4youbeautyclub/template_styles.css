@@ -709,7 +709,7 @@ button {
 	width: 100px;
 	height: 150px;
 	bottom: -10%;
-	right: 5%;
+	right: 6%;
 	top: inherit;
 	background: url('images/arrow_slider_white.svg') right 50% no-repeat;
 	background-color: #212121;
@@ -725,4 +725,24 @@ button {
 }
 .instruments .slick-prev {
 	left: -500%;
+}
+.instruments__slider{
+	margin-bottom: 120px;
+	z-index: 1;
+}
+.products{
+	background-color:#ECD9C5;
+	top: -4.625rem;
+	padding-block: 5rem;
+}
+.products .slick-dots button {
+	
+	background-color: #fff;
+	
+}
+.products .slick-dots .slick-active button {
+	background-color: #b48533;
+}
+.products .slick-dots li{
+	width: 28%;
 }

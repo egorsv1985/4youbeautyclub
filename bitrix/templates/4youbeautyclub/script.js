@@ -20,7 +20,7 @@ $('.specialists__slider').slick({
 	cssEase: 'linear',
 	slidesToShow: 3,
 	slidesToScroll: 1,
-	appendDots: $('.slick__dots'),
+	appendDots: $('.specialists-main .slick__dots'),
 
 	responsive: [
 		{
@@ -45,6 +45,16 @@ $('.instruments__slider').slick({
 	cssEase: 'linear',
 	slidesToShow: 1,
 	slidesToScroll: 1,	
+})
+$('.products__slider').slick({
+	infinite: true,
+	dots: true,
+	swipe: true,
+	arrows: false,
+	cssEase: 'linear',
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	appendDots: $('.products .slick__dots'),
 })
 		
 		/*

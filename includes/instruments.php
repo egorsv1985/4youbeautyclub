@@ -1,6 +1,6 @@
 <section class="instruments">
 	<div class="container">
-		<div class="mb-5 instruments__slider slider position-relative">
+		<div class=" instruments__slider slider position-relative">
 			<div class="slider__item">
 				<div class="row">
 					<div class="col-12 col-md-6 instruments__left">
@@ -17,8 +17,8 @@
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
-				</div>				
-			</div>			
+				</div>
+			</div>
 			<div class="slider__item">
 				<div class="row">
 					<div class="col-12 col-md-6 instruments__left">
@@ -35,8 +35,8 @@
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
-				</div>				
-			</div>			
+				</div>
+			</div>
 			<div class="slider__item">
 				<div class="row">
 					<div class="col-12 col-md-6 instruments__left">
@@ -53,8 +53,8 @@
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
-				</div>				
-			</div>			
+				</div>
+			</div>
 			<div class="slider__item">
 				<div class="row">
 					<div class="col-12 col-md-6 instruments__left">
@@ -71,10 +71,8 @@
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
-				</div>				
-			</div>			
-						
+				</div>
+			</div>
 		</div>
 	</div>
-	
 </section>
