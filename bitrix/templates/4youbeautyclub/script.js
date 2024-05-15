@@ -37,6 +37,15 @@ $('.specialists__slider').slick({
 		},
 	],
 })
+$('.instruments__slider').slick({
+	infinite: true,
+	dots: true,
+	swipe: true,
+	arrows: true,
+	cssEase: 'linear',
+	slidesToShow: 1,
+	slidesToScroll: 1,	
+})
 		
 		/*
 		var headerHeight = $('header').height();
