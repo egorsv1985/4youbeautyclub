@@ -6,7 +6,7 @@
 				<div class="fs-24">Мы работаем только с продуктами, прошедшими клинические испытания, обеспечивая максимальную эффективность и безопасность.</div>
 			</div>
 			<div class="col-6">
-				<div class=" products__slider slider position-relative">
+				<div class="mb-4  products__slider slider position-relative">
 					<div class="slider__item">
 						<div class="row g-4">
 							<div class="col-6 ">
