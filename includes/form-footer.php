@@ -1,4 +1,4 @@
-<section class="form-footer position-relative">
+<section class="form-footer position-relative" style=" background: #212121 url('<?= SITE_TEMPLATE_PATH; ?>/images/entry.png') no-repeat 50% 50% / 98% 100%; ">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-6">
@@ -12,14 +12,16 @@
 						"CUSTOM_TITLE_DETAIL_PICTURE" => "",
 						"CUSTOM_TITLE_DETAIL_TEXT" => "",
 						"CUSTOM_TITLE_IBLOCK_SECTION" => "",
-						"CUSTOM_TITLE_NAME" => "",
+						"CUSTOM_TITLE_NAME" => "Ваше имя",
 						"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
 						"CUSTOM_TITLE_PREVIEW_TEXT" => "",
 						"CUSTOM_TITLE_TAGS" => "",
 						"DEFAULT_INPUT_SIZE" => "30",
 						"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
 						"ELEMENT_ASSOC" => "CREATED_BY",
-						"GROUPS" => array("1"),
+						"GROUPS" => array(
+							0 => "1",
+						),
 						"IBLOCK_ID" => "4",
 						"IBLOCK_TYPE" => "SYSTEM",
 						"LEVEL_LAST" => "Y",
@@ -28,19 +30,26 @@
 						"MAX_LEVELS" => "100000",
 						"MAX_USER_ENTRIES" => "100000",
 						"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-						"PROPERTY_CODES" => array("3", "NAME"),
-						"PROPERTY_CODES_REQUIRED" => array("3"),
+						"PROPERTY_CODES" => array(
+							0 => "3",
+							1 => "NAME",
+						),
+						"PROPERTY_CODES_REQUIRED" => array(
+							0 => "3",
+						),
 						"RESIZE_IMAGES" => "N",
 						"SEF_MODE" => "N",
 						"STATUS" => "ANY",
 						"STATUS_NEW" => "N",
 						"USER_MESSAGE_ADD" => "Спасибо, Ваша заявка успешно сохранена",
 						"USER_MESSAGE_EDIT" => "Спасибо, Ваша заявка успешно сохранена!",
-						"USE_CAPTCHA" => "N"
-					)
+						"USE_CAPTCHA" => "N",
+						"COMPONENT_TEMPLATE" => "form-footer"
+					),
+					false
 				);
 				?>
-			</div>		
+			</div>
 		</div>
 	</div>
 </section>

@@ -769,9 +769,10 @@ button {
 	right: 0;
 	background: #ecd9c5;
 }
-.form-footer {
-	background-color: #212121;
+.form-footer  .form{
+	z-index: 2;
 }
+
 .form-footer .form::after,
 .form-footer .form::before {
 	content: '';
