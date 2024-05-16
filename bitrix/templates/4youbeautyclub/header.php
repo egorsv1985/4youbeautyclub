@@ -34,7 +34,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 	</div>
 	<div class="page position-relative" id="page-<?= strtolower(TYPE_PAGE); ?>">
 		<header class="top-0 w-100 start-0">
-			<div class="container position-relative">
+			<div class="container ">
 				<div class="py-4 justify-content-between row align-items-center flex-nowrap">
 					<div class="col-6 col-sm-4 col-lg-2">
 						<a href="/">
@@ -42,7 +42,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						</a>
 					</div>
 					<div class="col-lg-7 col-1 fw-600">
-						<ul class="flex-row py-3 text-center main-menu w-100 justify-content-between text-uppercase">
+						<ul class="py-3 text-center main-menu text-uppercase">
 							<li><a href="#">о нас</a></li>
 							<li><a href="/uslugi/">услуги</a></li>
 							<li><a href="#">специалисты</a></li>
