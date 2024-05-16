@@ -65,7 +65,8 @@ header.fixed {
 	z-index: 5;
 }
 .main-offer .offer-text h1 {
-	font-size: 7.5rem;
+	--font-size-offer: clamp(5rem, 7.74vi + 3.45rem, 8.25rem);
+	font-size: var(--font-size-offer);
 	line-height: 1.1em;
 	font-weight: 600;
 	letter-spacing: -3px;
@@ -89,7 +90,7 @@ header.fixed {
 	background: #ece1d7 url('images/bg-offer.jpg') 100% 50% no-repeat;
 	background-size: auto 100%;
 	left: 28%;
-	right: -2rem;
+	right: -7rem;
 	z-index: 1;
 }
 .main-offer .cover:after {
@@ -104,23 +105,15 @@ header.fixed {
 }
 .main-offer .directions {
 	transform: translate(0, 50%);
-	position: absolute;
+	position: relative;
 	z-index: 10;
-	bottom: 0;
-	right: 0;
+	flex-direction: column;
 	background: #212121;
 	color: #fff;
+	width: 100%;
+	gap: 3.75rem;
 }
-.main-offer .directions:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 100%;
-	height: 100%;
-	background: #212121;
-	width: 100vw;
-	content: '';
-}
+
 .main-offer .directions .item {
 	display: inline-block;
 	background-size: auto 100%;
@@ -130,13 +123,9 @@ header.fixed {
 }
 .main-offer .directions .item {
 	padding-right: 3.75rem;
-	margin-right: 3.75rem;
-	border-right: 1px solid #fff;
 }
 .main-offer .directions .item:last-child {
-	margin-right: 0;
 	padding-right: 0;
-	border-right: 0;
 }
 .main-offer .directions .ico-cosmetology {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iMzkiIHZpZXdCb3g9IjAgMCA0MCAzOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI5LjkxMzkgOS4zMjgyOEwyOC4yNzU0IDcuNzAzMDJMMzAuMjcxOSA2LjYwMzQ3TDMyLjY2NzggOC45NzMxMUwzMS41NTI1IDEwLjk1MzZMMjkuOTEzOSA5LjMyODI4Wk0zMS4yNjMzIDExLjYyOTVMMjkuNDI1MSA5LjgxMjkyTDI3LjU5MzggNy45ODk1NEwyMy42NzY0IDguNjM4MzFMMzAuNjA5MyAxNS41MjIyTDMxLjI2MzMgMTEuNjI5NVpNNDAgMC4wMTM2MjIzTDM4LjYyMzEgMEwzMS42MDc1IDYuOTU4NjNMMzIuMzAyOSA3LjY0ODQ2TDQwIDAuMDEzNjIyM1pNMTkuMzg3MiAyNy4xMDRMMTcuMzIxOSAyNS4wNTUzQzE3LjI4OTIgMjUuMDIzOCAxNy4yNjMyIDI0Ljk4NjEgMTcuMjQ1NCAyNC45NDQ1QzE3LjIyNzcgMjQuOTAyOCAxNy4yMTg2IDI0Ljg1ODEgMTcuMjE4NiAyNC44MTI5QzE3LjIxODYgMjQuNzY3NyAxNy4yMjc3IDI0LjcyMjkgMTcuMjQ1NCAyNC42ODEzQzE3LjI2MzIgMjQuNjM5NiAxNy4yODkyIDI0LjYwMiAxNy4zMjE5IDI0LjU3MDVDMTcuMzUzIDI0LjUzODIgMTcuMzkwNCAyNC41MTI0IDE3LjQzMTggMjQuNDk0OUMxNy40NzMyIDI0LjQ3NzMgMTcuNTE3OCAyNC40NjgyIDE3LjU2MjggMjQuNDY4MUMxNy42MDg5IDI0LjQ2ODEgMTcuNjU0NSAyNC40NzcyIDE3LjY5NzEgMjQuNDk0N0MxNy43Mzk2IDI0LjUxMjMgMTcuNzc4MiAyNC41MzggMTcuODEwNyAyNC41NzA1TDE5Ljg3NjEgMjYuNjE5MUwyMS4yMTg2IDI1LjI5NDNMMjAuMzAyOSAyNC4zODYxQzIwLjIzOTkgMjQuMzIwOSAyMC4yMDQ3IDI0LjIzNCAyMC4yMDQ3IDI0LjE0MzZDMjAuMjA0NyAyNC4wNTMzIDIwLjIzOTkgMjMuOTY2NCAyMC4zMDI5IDIzLjkwMTJDMjAuMzcwOSAyMy44NDAyIDIwLjQ1OTIgMjMuODA2MiAyMC41NTA4IDIzLjgwNTZDMjAuNjQwMSAyMy44MDc2IDIwLjcyNTcgMjMuODQxNSAyMC43OTE3IDIzLjkwMTJMMjEuNzAwNSAyNC44MDk1TDIzLjA0MyAyMy40Nzc4TDIwLjk3NzYgMjEuNDI5MkMyMC45NDQ5IDIxLjM5NzcgMjAuOTE5IDIxLjM2IDIwLjkwMTIgMjEuMzE4NEMyMC44ODM1IDIxLjI3NjcgMjAuODc0MyAyMS4yMzIgMjAuODc0MyAyMS4xODY4QzIwLjg3NDMgMjEuMTQxNiAyMC44ODM1IDIxLjA5NjkgMjAuOTAxMiAyMS4wNTUyQzIwLjkxOSAyMS4wMTM2IDIwLjk0NDkgMjAuOTc1OSAyMC45Nzc2IDIwLjk0NDRDMjEuMDQyOSAyMC44ODM2IDIxLjEyOSAyMC44NDkzIDIxLjIxODYgMjAuODQ4NkMyMS4zMDg0IDIwLjg0ODEgMjEuMzk0OSAyMC44ODI1IDIxLjQ1OTUgMjAuOTQ0NEwyMy41MzE5IDIyLjk5OThMMjQuODY3NSAyMS42NjgyTDIzLjk1ODcgMjAuNzU5OUMyMy45MjYxIDIwLjcyOTEgMjMuOTAwMSAyMC42OTIgMjMuODgyMyAyMC42NTA5QzIzLjg2NDYgMjAuNjA5OSAyMy44NTU0IDIwLjU2NTYgMjMuODU1NCAyMC41MjA5QzIzLjg1NTQgMjAuNDc2MiAyMy44NjQ2IDIwLjQzMiAyMy44ODIzIDIwLjM5MDlDMjMuOTAwMSAyMC4zNDk4IDIzLjkyNjEgMjAuMzEyOCAyMy45NTg3IDIwLjI4MTlDMjQuMDIyMyAyMC4yMTc4IDI0LjEwODkgMjAuMTgxIDI0LjE5OTYgMjAuMTc5NUMyNC4yNDU3IDIwLjE3OTUgMjQuMjkxMyAyMC4xODg2IDI0LjMzMzkgMjAuMjA2MkMyNC4zNzY0IDIwLjIyMzcgMjQuNDE1IDIwLjI0OTUgMjQuNDQ3NSAyMC4yODE5TDI1LjM1NjMgMjEuMTgzM0wyNi42OTg4IDE5Ljg1ODVMMjQuNjMzMyAxNy44MDMxQzI0LjU4NDUgMTcuNzU2IDI0LjU1MDkgMTcuNjk1NSAyNC41MzcxIDE3LjYyOTNDMjQuNTIzMiAxNy41NjMyIDI0LjUyOTcgMTcuNDk0NCAyNC41NTU2IDE3LjQzMTlDMjQuNTgxNiAxNy4zNjk0IDI0LjYyNTggMTcuMzE2MSAyNC42ODI2IDE3LjI3ODhDMjQuNzM5NCAxNy4yNDE1IDI0LjgwNjIgMTcuMjIxOSAyNC44NzQzIDE3LjIyMjZDMjQuOTYzOSAxNy4yMjMyIDI1LjA0OTkgMTcuMjU3MiAyNS4xMTUzIDE3LjMxNzhMMjcuMTg3NiAxOS4zNzM0TDI4LjUyMzMgMTguMDQxN0wyNy42MTQ1IDE3LjE0MDRDMjcuNTgxOCAxNy4xMDg5IDI3LjU1NTggMTcuMDcxMiAyNy41MzgxIDE3LjAyOTVDMjcuNTIwMyAxNi45ODc5IDI3LjUxMTIgMTYuOTQzMSAyNy41MTEyIDE2Ljg5NzlDMjcuNTExMiAxNi44NTI3IDI3LjUyMDMgMTYuODA4IDI3LjUzODEgMTYuNzY2M0MyNy41NTU4IDE2LjcyNDcgMjcuNTgxOCAxNi42ODcgMjcuNjE0NSAxNi42NTU0QzI3LjY0NTYgMTYuNjIzMSAyNy42ODMgMTYuNTk3NCAyNy43MjQ0IDE2LjU3OThDMjcuNzY1OCAxNi41NjIyIDI3LjgxMDQgMTYuNTUzMSAyNy44NTU0IDE2LjU1MzFDMjcuOTAxNSAxNi41NTMxIDI3Ljk0NzEgMTYuNTYyMSAyNy45ODk2IDE2LjU3OTdDMjguMDMyMiAxNi41OTczIDI4LjA3MDggMTYuNjIzIDI4LjEwMzMgMTYuNjU1NEwyOS4wMTIgMTcuNTU3MkwzMC4zNTQ2IDE2LjIzMjRMMjIuOTUzMyA4Ljg5MTMxTDcuNDA3ODcgMjQuMzE3OUwxNC44MDIxIDMxLjY1MkwxOS4zODcyIDI3LjEwNFpNMy45MzEwNiAzMy45NjdMNS4wNzQgMzUuMTAwNkw5LjEwODQgMzEuMTA1N0w3Ljk2NTYgMjkuOTY1NEwzLjkzMTA2IDMzLjk2N1pNOS44MzgyIDMwLjg1OThMMTQuNTc0OSAzNS41NjUxTDE2LjE3MjEgMzMuOTgwN0w1LjA2IDIyLjk1ODlMMy40NjI3MyAyNC41NDMxTDguMjA2NjcgMjkuMjQxNkw5LjgzODIgMzAuODU5OFpNNS44MjQ0IDM5TDYuOTI2IDM3LjkwNzVMNC44MzI2NiAzNS44MjQ1SDQuODI2TDMuMjAxMzMgMzQuMjEzMlYzNC4yMDY2TDEuMTAxMzMgMzIuMTMwNkwwIDMzLjIyMjdMNS44MjQ0IDM5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==');
@@ -847,7 +836,6 @@ button {
 	position: relative;
 	z-index: 105;
 	background-color: transparent;
-	
 }
 .burger__inner span,
 .burger__inner::before,
@@ -887,32 +875,71 @@ button {
 }
 
 .open .main-menu {
-  display: flex;
-  position: absolute;
-  background-color: #ECD9C5;
-  left: 0;
-  top: 0;
-  height: 100dvh;
-  width: 100dvw;
- flex-direction: column;
-  align-items: center;
+	display: flex;
+	position: absolute;
+	background-color: #ecd9c5;
+	left: 0;
+	top: 0;
+	height: 100dvh;
+	width: 100dvw;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-  z-index: 55;
-  padding-top: 45px;
+	z-index: 55;
+	padding-top: 45px;
 }
 
-.main-menu{
-	 gap: 10px;
-  display: none;
-  left: -100%;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
-} 
+.main-menu {
+	gap: 10px;
+	display: none;
+	left: -100%;
+	position: absolute;
+	transition: all 0.5s ease-in-out;
+}
+@media only screen and (min-width: 576px) {
+	.main-offer .directions:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 100%;
+	background: #212121;
+	width: 100vw;
+	content: '';
+}
+}
+@media only screen and (min-width: 768px) {
+	.main-offer .directions {
+		text-align: center;
+		flex-direction: row;
+	}
+	.main-offer .directions .item {
+		border-right: 1px solid #fff;
+	}
+	.main-offer .directions .item:last-child {
+		border-right: 0;
+	}
+}
 @media only screen and (min-width: 991px) {
-	.main-menu{
+	.main-menu {
 		display: flex;
 		left: inherit;
-    position: relative;
+		position: relative;
 		justify-content: space-between;
+	}
+	.main-offer .directions {
+		width: 65%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.main-offer .cover {
+		right: -2rem;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.main-offer .directions {
+		width: 50%;
 	}
 }

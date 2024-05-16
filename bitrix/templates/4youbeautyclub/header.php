@@ -87,8 +87,8 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 							</div>
 						</div>
 					</div>
-					<div class="cover"></div>
-					<div class="px-4 py-5 text-center directions fs-24 w-50 fw-400">
+					<div class="cover d-none d-md-block"></div>
+					<div class="px-4 py-5 directions d-flex flex-nowrap fs-24 fw-400">
 						<div class="item ico-cosmetology">косметология</div>
 						<div class="item ico-studio">студия красоты</div>
 					</div>
