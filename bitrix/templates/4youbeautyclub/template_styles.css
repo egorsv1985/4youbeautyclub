@@ -426,15 +426,7 @@ footer hr {
 	background: url('images/blog.png');
 	background-size: cover;
 }
-.news-right::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	height: 100%;
-	left: 100%;
-	background: #212121;
-	width: 100vw;
-}
+
 .menu-contaner .left-menu {
 	position: absolute;
 	top: 0;
@@ -498,7 +490,7 @@ footer hr {
 	line-height: 1.3em;
 }
 .fs-24 {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	line-height: 1.3em;
 }
 .fs-22 {
@@ -506,7 +498,7 @@ footer hr {
 	line-height: 1.3em;
 }
 .fs-58 {
-	font-size: 3.625rem;
+	font-size: 2.75rem;
 	line-height: 1.3em;
 }
 .fs-20 {
@@ -881,6 +873,14 @@ button {
 	position: absolute;
 	transition: all 0.5s ease-in-out;
 }
+@media only screen and (min-width: 400px) {
+	.fs-24{
+		font-size: 1.5rem;
+	}
+	.fs-58{
+		font-size: 3.625rem;
+	}
+}
 @media only screen and (min-width: 576px) {
 	.main-offer .directions:after {
 		content: '';
@@ -919,6 +919,15 @@ button {
 		background-size: 100% auto !important;
 		background: url('images/services-arrow.svg') 0 50% repeat-x;
 	}
+	.news-right::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	left: 100%;
+	background: #212121;
+	width: 100vw;
+}
 }
 @media only screen and (min-width: 991px) {
 	.main-menu {
