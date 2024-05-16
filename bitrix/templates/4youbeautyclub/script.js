@@ -17,6 +17,7 @@ $('.specialists__slider').slick({
 	dots: true,
 	swipe: true,
 	arrows: true,
+	
 	cssEase: 'linear',
 	slidesToShow: 3,
 	slidesToScroll: 1,
