@@ -386,21 +386,6 @@ footer hr {
 	left: 6%;
 	max-width: 26.25rem;
 }
-.services-link:first-child::after,
-.services-link:last-child::after {
-	transition: background-position 0.3s;
-	z-index: 1;
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	position: absolute;
-	bottom: 7%;
-	left: 45%;
-	height: 1rem;
-	width: 5.125rem;
-	background-size: 100% auto !important;
-	background: url('images/services-arrow.svg') 0 50% repeat-x;
-}
 
 .carousel-control-prev-icon {
 	rotate: 180deg;
@@ -898,15 +883,15 @@ button {
 }
 @media only screen and (min-width: 576px) {
 	.main-offer .directions:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 100%;
-	height: 100%;
-	background: #212121;
-	width: 100vw;
-	content: '';
-}
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 100%;
+		background: #212121;
+		width: 100vw;
+		content: '';
+	}
 }
 @media only screen and (min-width: 768px) {
 	.main-offer .directions {
@@ -918,6 +903,21 @@ button {
 	}
 	.main-offer .directions .item:last-child {
 		border-right: 0;
+	}
+	.services-link:first-child::after,
+	.services-link:last-child::after {
+		transition: background-position 0.3s;
+		z-index: 1;
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+		bottom: 7%;
+		left: 50%;
+		height: 1rem;
+		width: 5.125rem;
+		background-size: 100% auto !important;
+		background: url('images/services-arrow.svg') 0 50% repeat-x;
 	}
 }
 @media only screen and (min-width: 991px) {
