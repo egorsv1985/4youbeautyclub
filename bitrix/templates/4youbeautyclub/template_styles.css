@@ -677,6 +677,9 @@ button {
 .instruments__slider .slick-dots {
 	position: relative;
 	z-index: 50;
+	display: flex;
+	justify-content: center;
+	gap: .5rem;
 }
 .instruments__slider .slick-dots button {
 	width: 15px;
@@ -824,4 +827,20 @@ button {
 }
 .form-footer .btn-arrow{
 	max-width: 80%;
+}
+
+.contacts{
+	padding-top: 130px;
+}
+.contacts p,
+.contacts a{
+	color:#7C7C7C;
+}
+.contacts-mail{
+	
+	background: url("images/mail.svg") no-repeat 0 50% ;
+}
+.contacts-phone{
+	
+	background: url("images/phone.svg") no-repeat 0 50% ;
 }

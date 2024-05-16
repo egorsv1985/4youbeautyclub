@@ -16,8 +16,8 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.js');
 $asset->addCss(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 ?>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="ru">
 	<head>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

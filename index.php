@@ -18,10 +18,9 @@ $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/instruments.php"
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/products.php");
 ?>
-<?
-$APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/form-footer.php");
-?>
 
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>
+
+
