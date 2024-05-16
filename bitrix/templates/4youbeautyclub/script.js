@@ -56,7 +56,10 @@ $('.products__slider').slick({
 	slidesToScroll: 1,
 	appendDots: $('.products .slick__dots'),
 })
-		
+		$('.burger').click(function () {
+			$('html').toggleClass('open')
+			return false
+		})
 		/*
 		var headerHeight = $('header').height();
 		var topMenuContaner = $('.menu-contaner').offset().top;
