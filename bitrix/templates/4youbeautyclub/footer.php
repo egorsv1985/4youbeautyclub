@@ -10,17 +10,17 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <? else : ?>
 	</div>
 <? endif; ?>
-
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/form-footer.php");
 ?>
 <?
 $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/contacts-footer.php");
 ?>
+
 </div>
 <footer class="py-5 fw-300">
 	<div class="container pt-lg-5">
-		<div class="text-center row text-lg-start">
+		<div class="text-center row gy-4 text-md-start">
 			<div class="col-lg-3 col-md-6 col-12">
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" alt="" class="h-auto mw-100" width="121" height="54">
 				<div class="py-2 my-4 fs-18">
