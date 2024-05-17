@@ -12,9 +12,9 @@
 							<p>50+ технологических патентов</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 position-relative">
+					<div class="col-12 col-md-6 position-relative d-none d-lg-block">
 						<div class="position-absolute instruments__box-image">
-							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image.png" alt="Косметологическое оборудование">
+							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg1.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
 				</div>
@@ -30,9 +30,9 @@
 							<p>50+ технологических патентов</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 position-relative">
+					<div class="col-12 col-md-6 position-relative d-none d-lg-block">
 						<div class="position-absolute instruments__box-image">
-							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image.png" alt="Косметологическое оборудование">
+							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg1.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
 				</div>
@@ -48,9 +48,9 @@
 							<p>50+ технологических патентов</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 position-relative">
+					<div class="col-12 col-md-6 position-relative d-none d-lg-block">
 						<div class="position-absolute instruments__box-image">
-							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image.png" alt="Косметологическое оборудование">
+							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg1.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
 				</div>
@@ -66,13 +66,14 @@
 							<p>50+ технологических патентов</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 position-relative">
+					<div class="col-12 col-md-6 position-relative d-none d-lg-block">
 						<div class="position-absolute instruments__box-image">
-							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image.png" alt="Косметологическое оборудование">
+							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/equipment_image-bg1.png" alt="Косметологическое оборудование">
 						</div>
 					</div>
 				</div>
 			</div>
+		
 		</div>
 	</div>
 </section>
