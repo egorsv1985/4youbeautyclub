@@ -1,6 +1,6 @@
 <section class="contacts fs-24">
 	<div class="container">
-		<div class="row">
+		<div class="row gy-4">
 			<div class="col-12 col-lg-4">
 				<h2 class="mb-5 fs-58 fw-700">Контакты</h2>
 				<div class="d-flex flex-column">

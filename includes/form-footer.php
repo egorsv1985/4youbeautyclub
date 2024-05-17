@@ -1,5 +1,5 @@
-<section class="form-footer position-relative" style=" background: #212121 url('<?= SITE_TEMPLATE_PATH; ?>/images/entry.png') no-repeat 50% 50% / 98% 100%; ">
-	<div class="container">
+<section class="form-footer position-relative">
+	<div class="container ">
 		<div class="row">
 			<div class="col-12 col-lg-6">
 				<?
@@ -49,6 +49,11 @@
 					false
 				);
 				?>
+			</div>
+			<div class="col-12 col-lg-6 d-none d-lg-block">
+				<div class="position-absolute form-footer__box-img" style="background: url('<?= SITE_TEMPLATE_PATH; ?>/images/entry2.png')  no-repeat center / cover;">
+
+				</div>
 			</div>
 		</div>
 	</div>

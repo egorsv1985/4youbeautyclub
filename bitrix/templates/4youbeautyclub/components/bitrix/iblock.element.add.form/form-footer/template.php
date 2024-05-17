@@ -19,7 +19,7 @@ if (!empty($arResult["ERRORS"])) : ?>
 if ($arResult["MESSAGE"] <> '') : ?>
 	<? ShowNote($arResult["MESSAGE"]) ?>
 <? endif ?>
-<form class=" form position-relative" name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data">
+<form class="px-5 py-5 ps-lg-0 form position-relative" name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data">
 	<div class="gap-4 d-flex flex-column">
 		<h2 class="text-white fs-58 fw-700">Скидка на первое посещение 10%</h2>
 		<?= bitrix_sessid_post() ?>
@@ -315,7 +315,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 				данных
 			</label>
 		</div>		 -->
-		<button type="submit" class="px-4 py-3  border-white text-start btn btn-outline-white btn-arrow top-btn btn-arrow--white fs-24">
+		<button type="submit" class="px-4 py-3 border-white text-start btn btn-outline-white btn-arrow top-btn btn-arrow--white fs-24">
 			Записаться
 		</button>
 
