@@ -43,12 +43,12 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 					</div>
 					<div class="col-lg-7 col-1 fw-600">
 						<ul class="py-3 text-center main-menu text-uppercase">
-							<li><a href="#">о нас</a></li>
+							<li><a href="/about/">о нас</a></li>
 							<li><a href="/uslugi/">услуги</a></li>
-							<li><a href="#">специалисты</a></li>
+							<li><a href="/specialists/">специалисты</a></li>
 							<li><a href="#">до/после</a></li>
-							<li><a href="#">контакты</a></li>
-							<li><a href="#">блог</a></li>
+							<li><a href="/contacts/">контакты</a></li>
+							<li><a href="/blog/">блог</a></li>
 						</ul>
 					</div>
 					<div class="col-6 col-lg-3 text-end d-none d-sm-block">
