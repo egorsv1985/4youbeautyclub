@@ -528,7 +528,7 @@ button {
 	width: 3.5rem;
 	margin-right: 1.25rem;
 }
-.specialists .slick__control,
+.specialists-main .slick__control,
 .products .slick__control {
 	width: 100%;
 }
@@ -684,10 +684,7 @@ button {
 	top: 2%;
 	left: -14%;
 }
-.instruments__box-image img {
-	/* width: 100%;
-	height: 100%; */
-}
+
 .instruments .slider__item {
 	opacity: 0;
 	transition: all 0.5s ease-in-out;
@@ -742,8 +739,7 @@ button {
 .products .slick-dots li {
 	width: 20%;
 }
-.products .slick-slide img {
-}
+
 .products::before {
 	content: '';
 	display: block;
@@ -771,7 +767,7 @@ button {
 	z-index: 1;
 }
 
-.form-footer__box-img{
+.form-footer__box-img {
 	top: 1.875rem;
 	bottom: 1.875rem;
 	right: 0;
@@ -929,7 +925,7 @@ button {
 	.main-offer .directions .item:last-child {
 		border-right: 0;
 	}
-	.specialists .slick__control,
+	.specialists-main .slick__control,
 	.products .slick__control {
 		width: 50%;
 	}
@@ -961,6 +957,7 @@ button {
 		width: 100vw;
 	}
 }
+
 @media only screen and (min-width: 991px) {
 	.form-footer .form::before {
 		content: '';

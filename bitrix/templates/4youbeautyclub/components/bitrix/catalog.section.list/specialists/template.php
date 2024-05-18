@@ -33,8 +33,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 </ul>
 <div class="tab-content" id="specialistsTabContent">
 	<?
-	
-	 foreach ($arResult['SECTIONS'] as &$arSection) :
+	foreach ($arResult['SECTIONS'] as &$arSection) :
 		$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
 		$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);
 		$arFilter = array(
@@ -44,7 +43,6 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 			"ACTIVE" => "Y"
 		);
 		$slideCount = CIBlockElement::GetList(array(), $arFilter, array(), false, array());
-
 	?>
 		<div class="tab-pane fade <?= $key ? '' : ' active show' ?> position-relative" id="<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="<?= $arSection['ID']; ?>-tab">
 			<div class="mb-5 specialists__slider-<?= $arSection['ID']; ?> slider">
@@ -118,7 +116,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 				);
 				?>
 			</div>
-			<div class="justify-between slick__control-<?= $arSection['ID']; ?> align-items-center ms-auto d-flex">
+			<div class="justify-between slick__control slick__control-<?= $arSection['ID']; ?> align-items-center ms-auto d-flex">
 				<span class="fs-27 fw-500 num--first">01</span>
 				<div class="slick__dots-<?= $arSection['ID']; ?> w-100"></div>
 				<span class="fs-27 fw-500 num--last"><? echo ($slideCount < 10) ? str_pad($slideCount, 2, '0', STR_PAD_LEFT) : $slideCount; ?></span>

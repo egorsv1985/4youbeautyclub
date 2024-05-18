@@ -13,24 +13,24 @@
 $this->setFrameMode(true);
 // print_r($arResult);
 ?>
-
 <?
-
-foreach ($arResult["ITEMS"] as $index => $arItem) : ?>
-	<?
+foreach ($arResult["ITEMS"] as $arItem) :
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-	?>
+?>
 	<div class="slider__item">
-		<div class="px-3">
-			<div class="mb-4">
-				<img class="w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+		<div class="row">
+			<div class="col-12 col-md-6 instruments__left">
+				<h2 class="mb-5 fs-58 fw-700"><?= $arItem["NAME"]; ?></h2>
+				<div class="instruments__content fs-24">
+					<?= $arItem["PREVIEW_TEXT"]; ?>
+				</div>
 			</div>
-			<div class="py-1 border-2 border-black slider__content ps-4 border-start">
-				<div class="mb-2 fs-24 fw-600 text-uppercase slider__name"><?= $arItem["NAME"]; ?></div>
-				<div class="fs-24 slider__post"><?= $arItem['PROPERTIES']['POST']['VALUE']; ?></div>
+			<div class="col-12 col-md-6 position-relative d-none d-lg-block">
+				<div class="position-absolute instruments__box-image">
+					<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+				</div>
 			</div>
-			<div class="fs-24 ps-4"><span>стаж </span><?= $arItem['PROPERTIES']['PERIOD']['VALUE']; ?></div>
 		</div>
 	</div>
 <? endforeach; ?>
