@@ -44,7 +44,7 @@
 							"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 							"INCLUDE_SUBSECTIONS" => "Y",
 							"MESSAGE_404" => "",
-							"NEWS_COUNT" => "4",
+							"NEWS_COUNT" => "3",
 							"PAGER_BASE_LINK_ENABLE" => "N",
 							"PAGER_DESC_NUMBERING" => "N",
 							"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",

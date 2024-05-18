@@ -11,25 +11,28 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// print_r($arResult);
 ?>
+
 <div class="row gy-4">
-	<? foreach ($arResult["ITEMS"] as $arItem) : ?>
+	<? foreach ($arResult["ITEMS"] as $index => $arItem) : ?>
 		<?
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 		?>
-		<div class="col-12 col-lg-8 position-relative d-none d-xl-block">
-			<div class="position-relative h-100">
-				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/blog.png" alt="" class="bottom-0 h-auto position-absolute w-100">
+		<? if ($index == 0) : ?>
+			<div class="col-12 col-lg-8 position-relative d-none d-xl-block">
+				<div class="position-relative h-100">
+					<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="bottom-0 h-auto position-absolute w-100">
+				</div>
 			</div>
-		</div>
-		<div class="col-12 col-xl-4 ">
-			<a href="#" class="px-2 py-3 news-item h-100 d-inline-block text-uppercase">
-				<div class="mb-5 news-num">1</div>
+		<? endif; ?>
+		<div class="col-12  <?= $index == 0 ? 'col-xl-4' : ($index == 1 ? 'col-lg-4' : 'col-lg-8') ?>">
+			<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="px-2 py-3 news-item h-100 d-inline-block text-uppercase">
+				<div class="mb-5 news-num"><? $index + 1 ?></div>
 				<p><?= $arItem["~NAME"] ?> </p>
 			</a>
 		</div>
-		
 	<? endforeach; ?>
 </div>
 
