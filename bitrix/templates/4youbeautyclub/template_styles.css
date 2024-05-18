@@ -762,6 +762,7 @@ button {
 	justify-content: center;
 	align-items: center;
 }
+
 .form-footer {
 	margin-top: -30px;
 }
@@ -769,6 +770,7 @@ button {
 	background-color: #212121;
 	z-index: 1;
 }
+
 .form-footer__box-img{
 	top: 1.875rem;
 	bottom: 1.875rem;

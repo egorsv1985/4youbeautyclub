@@ -28,8 +28,8 @@ $this->setFrameMode(true);
 			</div>
 		<? endif; ?>
 		<div class="col-12  <?= $index == 0 ? 'col-xl-4' : ($index == 1 ? 'col-lg-4' : 'col-lg-8') ?>">
-			<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="px-2 py-3 news-item h-100 d-inline-block text-uppercase">
-				<div class="mb-5 news-num"><? $index + 1 ?></div>
+			<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="px-2 py-3 news-item h-100 d-flex justify-content-between flex-column text-uppercase">
+				<div class="mb-5 news-num"><?= $index + 1 ?></div>
 				<p><?= $arItem["~NAME"] ?> </p>
 			</a>
 		</div>

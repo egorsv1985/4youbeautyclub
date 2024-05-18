@@ -22,5 +22,3 @@ $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/products.php");
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>
-
-

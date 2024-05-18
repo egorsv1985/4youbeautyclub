@@ -94,3 +94,5 @@ $('.products__slider').slick({
 	});
 
 });
+
+
