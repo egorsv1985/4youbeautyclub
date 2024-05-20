@@ -64,10 +64,10 @@ header.fixed {
 	position: relative;
 	z-index: 5;
 }
-.main-offer .offer-text h1 {
-	--font-size-offer: clamp(5rem, 7.74vi + 3.45rem, 8.25rem);
+.main-offer .offer-text h1 {	
+	--font-size-offer: clamp(5rem, 5.95vi + 3.81rem, 7.5rem);
 	font-size: var(--font-size-offer);
-	line-height: 1.1em;
+	line-height: 1em;
 	font-weight: 600;
 	letter-spacing: -3px;
 }

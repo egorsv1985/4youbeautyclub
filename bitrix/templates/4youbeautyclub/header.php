@@ -71,8 +71,8 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 				<div class="container mb-5 position-relative">
 					<div class="row">
 						<div class="col-md-6 offer-text">
-							<div class="mb-2 tab-label fs-18">Салон красоты</div>
-							<h1 class="text-uppercase">
+							<div class="mb-4 tab-label fs-18">Салон красоты</div>
+							<h1 class="mb-4 text-uppercase">
 								4you
 								Beauty
 								Club
@@ -101,7 +101,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 							<div class="cover"></div>
 						</div>
 						<div class="py-5 col-md-6 ps-5 fs-24">
-							<h2 class="fs-58 fw-700">О нас</h2>
+							<h2 class="mb-4 fs-58 fw-700">О нас</h2>
 							<p>Мы используем передовые технологии и профессиональное оборудование для максимально эффективных и безопасных процедур.</p>
 							<p>Мы гарантируем вам не только ухоженность, но и радость от каждой посещённой нами процедуры. Доверьтесь профессионалам и откройте для себя новое измерение косметологии!</p>
 
@@ -200,7 +200,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 				)
 			); ?>
 			<? $APPLICATION->ShowViewContent('topPage'); ?>
-			<section class="py-5 head-title">
+			<div class="py-5 head-title">
 				<div class="container">
 					<div class="row">
 						<div class="col text-uppercase">
@@ -209,6 +209,6 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						<? $APPLICATION->ShowViewContent('topColRight'); ?>
 					</div>
 				</div>
-			</section>
+			</div>
 			<div class="container">
 			<? endif; ?>
