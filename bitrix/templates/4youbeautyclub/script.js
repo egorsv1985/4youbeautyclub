@@ -47,6 +47,14 @@ $('.instruments__slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,	
 })
+$('.gallery__slider').slick({
+	infinite: true,	
+	swipe: true,
+	arrows: true,
+	cssEase: 'linear',
+	slidesToShow: 1,
+	slidesToScroll: 1,
+})
 $('.products__slider').slick({
 	infinite: true,
 	dots: true,

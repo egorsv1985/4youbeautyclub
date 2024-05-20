@@ -1,3 +1,8 @@
+<?php
+require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.php");
+CModule::IncludeModule("iblock");
+?>
+
 <?
 define('TYPE_PAGE', 'MAIN');
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
