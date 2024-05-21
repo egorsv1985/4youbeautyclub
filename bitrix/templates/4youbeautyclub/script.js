@@ -55,6 +55,7 @@ $('.gallery__slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 })
+
 $('.products__slider').slick({
 	infinite: true,
 	dots: true,

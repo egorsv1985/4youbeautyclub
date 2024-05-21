@@ -20,8 +20,8 @@ $itemsPerRow = 6;
 $numRows = floor($totalItems / $itemsPerRow);
 
 for ($row = 0; $row < $numRows; $row++) : ?>
-	<div class="slider__item">
-		<div class="row">
+	<div class="slider__item ">
+		<div class="g-0 row ">
 			<? for ($col = 0; $col < $itemsPerRow; $col++) : ?>
 				<?
 				$index = $row * $itemsPerRow + $col;
@@ -29,8 +29,8 @@ for ($row = 0; $row < $numRows; $row++) : ?>
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 				?>
-				<div class="col-lg-3 <? if (($col + 1) % 4 == 0) echo 'offset-lg-3'; ?>">
-					<div class="gallery__box">
+				<div class="col-12 col-lg-3 p-0 <? if (($col + 1) % 4 == 0) echo 'offset-lg-3'; ?>">
+					<div class="gallery__box d-flex justify-content-center align-items-center h-100">
 						<? if ($arItem["PREVIEW_PICTURE"]["SRC"]) : ?>
 							<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
 						<? else : ?>
