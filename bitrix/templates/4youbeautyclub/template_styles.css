@@ -1067,8 +1067,10 @@ button {
 .documents{
 	background-color: #ECD9C5;
 }
-.documents ul {
+.documents ul,
+.vakansii ul {
 	list-style: none;
+	padding-left: 0;
 }
 .documents .nav-tabs .nav-link,
 .documents .nav-tabs .nav-link.active
