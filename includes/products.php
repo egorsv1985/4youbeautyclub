@@ -18,7 +18,7 @@ $slideCount = ceil($itemCount / 2);
 				<div class="fs-24">Мы работаем только с продуктами, прошедшими клинические испытания, обеспечивая максимальную эффективность и безопасность.</div>
 			</div>
 			<div class="col-12 col-lg-6">
-				<div class="mb-4 products__slider slider position-relative">
+				<div class="mb-4 products__slider slider">
 					<?
 					$APPLICATION->IncludeComponent(
 						"bitrix:news.list",

@@ -86,6 +86,24 @@ $('.products__slider').slick({
 		},		
 	],
 })
+$('.reviews__slider').slick({
+	infinite: true,
+	dots: true,
+	swipe: true,
+	arrows: true,
+	cssEase: 'linear',
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	appendDots: $('.reviews .slick__dots'),
+	responsive: [		
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 1,
+			},
+		},		
+	],
+})
 		$('.burger').click(function () {
 			$('html').toggleClass('open')
 			return false
