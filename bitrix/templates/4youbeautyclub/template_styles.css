@@ -1019,6 +1019,10 @@ button {
 	width: 525px;
 	height: 368px;
 }
+.gallery{
+	    max-width: 1512px;
+    margin: 0 auto;
+}
 .gallery__slider {
 	background-color: #ecd9c5;
 }
@@ -1106,4 +1110,12 @@ button {
 	width: 4.0625rem;
 	background-size: 100%  !important;
 	background: url('images/pdf.svg') 50% no-repeat;
+}
+.blog__data{
+	
+	
+	background-color: rgba(243, 243, 243, 0.56);
+}
+.blog__data span{
+	opacity: 0.8;
 }

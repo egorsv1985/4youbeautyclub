@@ -18,17 +18,17 @@ $this->setFrameMode(true);
 <section class="py-5 vakansii">
 	<div class="container">
 		<h2 class="mb-5 fs-58 fw-700 text-uppercase">Вакансии</h2>
-		<ul class="flex-column d-flex">
+		<ul class="gap-3 flex-column d-flex">
 			<?
 			foreach ($arResult["ITEMS"] as $index => $arItem) :
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 			?>
-				<li class="py-4 border-2 border-bottom vakansii__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-					<div class=" col fs-24 fw-600 text-uppercase">
-						<div class="d-flex justify-content-between">
-							<div class=""><?= $arItem["NAME"]; ?></div>
-							<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">подробнее</a>
+				<li class="py-2 border-2 border-bottom vakansii__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+					<div class=" col fs-24 fw-600">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="text-uppercase"><?= $arItem["NAME"]; ?></div>
+							<a href="#" class="p-0 btn top-btn btn-arrow fs-24">подробнее</a>
 						</div>
 					</div>
 				</li>
