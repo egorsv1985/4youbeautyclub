@@ -76,22 +76,22 @@ $APPLICATION->IncludeFile($APPLICATION->GetCurDir() . "includes/contacts-footer.
 				<div class="mb-3 f-title text-uppercase fw-500 fs-24">Навигация</div>
 				<ul class="mb-4 f-menu fs-22">
 					<li>
-						<a href="#">о нас</a>
+						<a href="/about/">о нас</a>
 					</li>
 					<li>
-						<a href="#">услуги</a>
+						<a href="/uslugi/">услуги</a>
 					</li>
 					<li>
-						<a href="#">специалисты</a>
+						<a href="/specialists/">специалисты</a>
 					</li>
 					<li>
 						<a href="#">до/после</a>
 					</li>
 					<li>
-						<a href="#">контакты</a>
+						<a href="/contacts/">контакты</a>
 					</li>
 					<li>
-						<a href="#">блог</a>
+						<a href="/blog/">блог</a>
 					</li>
 				</ul>
 			</div>

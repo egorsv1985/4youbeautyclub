@@ -11,7 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-print_r($arResult);
+// print_r($arResult);
 ?>
 <div class="row">
 
@@ -23,7 +23,8 @@ print_r($arResult);
 	?>
 		<div class=" col-12 col-lg-6">
 			<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="border border-black d-flex flex-column">
-				<div class="p-4 blog__data fs-24"><span>
+				<div class="p-4 blog__data fs-24">
+					<span>
 						<?= $arItem["ACTIVE_FROM"] ?>
 					</span>
 				</div>

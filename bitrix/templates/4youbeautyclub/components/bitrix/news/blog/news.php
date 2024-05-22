@@ -1,6 +1,5 @@
 <?php
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
-{
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 	die();
 }
 /** @var array $arParams */
@@ -16,10 +15,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "services", Array(
-	"COMPONENT_TEMPLATE" => ".default",
+<? $APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list",
+	"news",
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "CONTENT",	// Тип инфоблока
-		"IBLOCK_ID" => "1",	// Инфоблок
+		"IBLOCK_ID" => "5",	// Инфоблок
 		"SECTION_ID" => "0",	// ID раздела
 		"SECTION_CODE" => "",	// Код раздела
 		"COUNT_ELEMENTS" => "Y",	// Показывать количество элементов в разделе
@@ -29,8 +31,8 @@ $this->setFrameMode(true);
 		"TOP_DEPTH" => "1",	// Максимальная отображаемая глубина разделов
 		"SECTION_FIELDS" => array(	// Поля разделов
 			0 => "NAME",
-			1 => "DESCRIPTION",
-			2 => "PICTURE",
+			1 => "AUTOR",
+			2 => "",
 			3 => "",
 		),
 		"SECTION_USER_FIELDS" => array(	// Свойства разделов
@@ -48,4 +50,4 @@ $this->setFrameMode(true);
 		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
 	),
 	false
-);?>
+); ?>
