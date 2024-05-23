@@ -15,7 +15,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 // print_r($arResult);
 ?>
-<section class="py-5 vakansii">
+<section class="py-5 mb-5 vakansii">
 	<div class="container">
 		<h2 class="mb-5 fs-58 fw-700 text-uppercase">Вакансии</h2>
 		<ul class="gap-3 flex-column d-flex">

@@ -42,7 +42,7 @@ $APPLICATION->IncludeComponent(
 );
 ?>
 <section class="py-5 about-us">
-	<div class="container mb-5 position-relative">
+	<div class="container position-relative">
 		<div class="row gx-0">
 			<div class="col-md-6 position-relative">
 				<div class="cover"></div>

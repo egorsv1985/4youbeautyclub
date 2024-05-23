@@ -15,11 +15,19 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/libs/bootstrap-5.3.3-dist/js/bootstrap.js')
 $asset->addJs(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.js');
 $asset->addCss(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.css');
 $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
+if (CModule::IncludeModule("victory.options")) {
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
+	<? if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome-Lighthouse') === false) : ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<? else : ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<? endif; ?>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -33,7 +41,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 		<? $APPLICATION->ShowPanel(); ?>
 	</div>
 	<div class="page position-relative" id="page-<?= strtolower(TYPE_PAGE); ?>">
-		<header class="top-0 w-100 start-0">
+		<header class="top-0 w-100 start-0" id="header">
 			<div class="container ">
 				<div class="py-4 justify-content-between row align-items-center flex-nowrap">
 					<div class="col-6 col-sm-4 col-lg-2">
@@ -46,7 +54,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 							<li><a href="/about/">о нас</a></li>
 							<li><a href="/uslugi/">услуги</a></li>
 							<li><a href="/specialists/">специалисты</a></li>
-							<li><a href="#">до/после</a></li>
+							<li><a href="/comparison/">до/после</a></li>
 							<li><a href="/contacts/">контакты</a></li>
 							<li><a href="/blog/">блог</a></li>
 						</ul>
@@ -64,9 +72,22 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/script.js');
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</header>
 		<? if (TYPE_PAGE == 'MAIN') : ?>
+			<ul class="gap-4 d-flex flex-column align-items-center justify-content-between header__social">
+				<li>
+					<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram_' . SITE_ID); ?>" target="_blank">
+						<img src="<?= SITE_TEMPLATE_PATH ?>/images/telegram.svg" alt="telegram" class="">
+					</a>
+				</li>
+				<li>
+					<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" target="_blank">
+						<img src="<?= SITE_TEMPLATE_PATH ?>/images/instagram.svg" alt="instagram" class="">
+					</a>
+				</li>
+			</ul>
 			<section class="pb-5 main-offer">
 				<div class="container mb-5 position-relative">
 					<div class="row">

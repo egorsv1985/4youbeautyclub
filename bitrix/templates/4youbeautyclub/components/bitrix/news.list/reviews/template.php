@@ -30,7 +30,7 @@ $itemCount = CIBlockElement::GetList(array(), $arFilter, array());
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 
 			?>
-				<div class="px-4 slider__item fs-24 position-relative h-100">
+				<div class="px-4 slider__item fs-24 position-relative h-50">
 					<div class="gap-4 mb-4 d-flex">
 						<div class="">
 							<img class="w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">

@@ -15,11 +15,11 @@ $this->setFrameMode(true);
 ?>
 <section class="py-5 news-main">
 	<div class="container">
-		<div class="pt-5 row gy-4">
+		<div class=" row gy-4">
 			<div class=" col-12 col-xl-4 fs-24">
 				<h2 class="mb-4 fs-58 fw-700">Популярные статьи</h2>
 				<p>Мы используем передовые технологии и профессиональное оборудование для максимально эффективных и безопасных процедур.</p>
-				<div class="mt-5 btns">
+				<div class="mt-5 btns d-none d-lg-block">
 					<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Все статьи</a>
 				</div>
 			</div>
@@ -44,10 +44,13 @@ $this->setFrameMode(true);
 									<p><?= $arItem["~NAME"] ?> </p>
 								</a>
 							</div>
-						<? endforeach; ?>
+							<? endforeach; ?>
+						</div>
 					</div>
 				</div>
+				<div class="d-lg-none btns">
+					<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Все статьи</a>
+				</div>
 			</div>
-		</div>
 	</div>
 </section>

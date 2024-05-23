@@ -57,23 +57,23 @@ $APPLICATION->IncludeComponent(
 	false
 );
 ?>
-<section class="contacts fs-24">
+<section class="contacts fs-24 <? (TYPE_PAGE == 'CONTACTS') ? 'd-none' : '' ?>">
 	<div class="container">
 		<div class="row gy-4">
 			<div class="col-12 col-lg-4">
 				<h2 class="mb-5 fs-58 fw-700">Контакты</h2>
 				<div class="d-flex flex-column">
-
 					<h3>Адрес</h3>
-					<p>Москва, ул. Любимова, 6</p>
+					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID); ?></p>
 					<h3>Режим работы:</h3>
-					<p>с 10:00 до 20:00<br>без выходных</p>
+					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('schedule_' . SITE_ID); ?></p>
 				</div>
 				<div class="gap-4 d-flex flex-column">
-					<a href="tel:88000001111" class="d-block fs-24 text-nowrap ps-5 contacts-phone">
-						8 (800) 000-11-11
-					</a>
-					<a href="mailto:4youbeautyclub@gmail.com" class="d-block text-nowrap fs-24 ps-5 contacts-mail">4youbeautyclub@gmail.com</a>
+					<?
+					$tel = \Victory\Options\CVictoryOptions::getOptionValue('tel_' . SITE_ID);
+					?>
+					<a href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $tel); ?>" class="d-block fs-24 text-nowrap ps-5 contacts-phone"><?= $tel; ?></a>
+					<a href="mailto:<?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?></a>
 				</div>
 			</div>
 			<div class="col-12 col-lg-8">
@@ -130,7 +130,7 @@ $APPLICATION->IncludeComponent(
 						<a href="/specialists/">специалисты</a>
 					</li>
 					<li>
-						<a href="#">до/после</a>
+						<a href="/comparison/">до/после</a>
 					</li>
 					<li>
 						<a href="/contacts/">контакты</a>
@@ -158,6 +158,18 @@ $APPLICATION->IncludeComponent(
 				<div class="mb-3 f-title text-uppercase fw-500 fs-24"><a href="/o_nas/">О клинике</a></div>
 				<div class="pb-2 mb-4 fs-22">ООО «ФОЮ» Лицензия Л041-01126-23/00588911 от 10.06.2021 г. ИНН 2364019749</div>
 				<div class="mb-3 f-title text-uppercase fw-500 fs-24">мы в соц.Сетях</div>
+				<ul class="gap-4 d-flex align-items-center justify-content-center justify-content-lg-start">
+					<li>
+						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram_' . SITE_ID); ?>" target="_blank">
+							<img src="<?= SITE_TEMPLATE_PATH ?>/images/telegram-white.svg" alt="telegram" class="">
+						</a>
+					</li>
+					<li>
+						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" target="_blank">
+							<img src="<?= SITE_TEMPLATE_PATH ?>/images/instagram-white.svg" alt="instagram" class="">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<hr class="my-4">

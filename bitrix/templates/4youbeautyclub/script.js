@@ -119,6 +119,23 @@ $('.reviews__slider').slick({
 		}
 		*/
 	});
+// const pageText = $('#page-text')
+// const menuContainerOffset = $('#menu-container').offset().top
+// const headerHeight = $('#header').height()
+
+// $(window).scroll(function () {
+// 	const scrolled = $(this).scrollTop()
+// 	const menuFixedTopClassName = 'menu-fixed--top'
+// 	if (scrolled > menuContainerOffset) {
+// 		pageText.addClass(menuFixedTopClassName)
+// 		const windowHeight = $(window).height()
+// 		$('.menu-fixed--top .left-menu').css({
+// 			top: headerHeight + 'px',
+// 		})
+// 	} else if (scrolled < menuContainerOffset) {
+// 		pageText.removeClass(menuFixedTopClassName)
+// 	}
+// })
 
 });
 
