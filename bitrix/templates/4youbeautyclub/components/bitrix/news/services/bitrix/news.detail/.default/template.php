@@ -17,17 +17,17 @@ if ($arResult["DETAIL_PICTURE"]) {
 	if (CModule::IncludeModule("millcom.phpthumb"))
 		$arResult["DETAIL_PICTURE"]['WEBP'] = CMillcomPhpThumb::generateImg($arResult["DETAIL_PICTURE"]["SRC"], 3);
 ?>
-	<div class="cover-page text-center" style="background-image: url('<?= $arResult["DETAIL_PICTURE"]["WEBP"]; ?>')">
-		<div class="blackout py-5">
+	<div class="text-center cover-page" style="background-image: url('<?= $arResult["DETAIL_PICTURE"]["WEBP"]; ?>')">
+		<div class="py-5 blackout">
 			<div class="container py-5">
-				<div class="h1 mt-5 fs-70 fw-700"><?= $arResult['NAME'] ?></div>
+				<div class="mt-5 h1 fs-70 fw-700"><?= $arResult['NAME'] ?></div>
 				<? if ($arResult["PREVIEW_TEXT"]) : ?>
 					<p class="text-uppercase fs-24 fw-500">
 						<?= $arResult["PREVIEW_TEXT"]; ?>
 					</p>
 				<? endif; ?>
-				<div class="btns mt-5">
-					<a href="#" class="btn btn-outline-light top-btn btn-arrow fs-24 py-3 px-4">Записаться на приём</a>
+				<div class="mt-5 btns">
+					<a href="#" class="px-4 py-3 btn btn-outline-light top-btn btn-arrow fs-24">Записаться на приём</a>
 				</div>
 			</div>
 		</div>
@@ -35,19 +35,16 @@ if ($arResult["DETAIL_PICTURE"]) {
 <?
 	$this->EndViewTarget();
 }
-
-
-
 ?>
-<div class="service-detail fs-24 py-5 my-4">
+<div class="py-5 my-4 service-detail fs-24">
 	<?= $arResult["DETAIL_TEXT"]; ?>
 </div>
 <? if ($arResult['PROPERTIES']['PRICES']['VALUE']) : ?>
-	<div class="prices-block my-5">
+	<div class="my-5 prices-block">
 		<h2 class="fs-58 fw-600">Стоимость услуг</h2>
-		<div class="price-items mt-4">
+		<div class="mt-4 price-items">
 			<? foreach ($arResult['PROPERTIES']['PRICES']['VALUE'] as $key => $PRICE_NAME) : ?>
-				<div class="price-item py-3">
+				<div class="py-3 price-item">
 					<div class="row align-items-center">
 						<div class="col-md-6 fs-24 text-uppercase fw-500">
 							<?= $PRICE_NAME; ?>
@@ -56,7 +53,7 @@ if ($arResult["DETAIL_PICTURE"]) {
 							<?= is_numeric($arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key]) ? number_format($arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key], 0, '.', ' ') . '₽' : $arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key]; ?>
 						</div>
 						<div class="col-md-3 text-end">
-							<a href="#" class="btn  top-btn btn-arrow fs-24 p-0">записаться</a>
+							<a href="#" class="p-0 btn top-btn btn-arrow fs-24">записаться</a>
 						</div>
 					</div>
 				</div>

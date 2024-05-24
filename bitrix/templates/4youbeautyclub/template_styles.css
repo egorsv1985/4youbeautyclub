@@ -1115,14 +1115,13 @@ button {
 .documents__item a::before {
 	content: '';
 	display: block;
-	position: absolute;	
+	position: absolute;
 	height: 4.0625rem;
 	width: 4.0625rem;
 	left: 1.25rem;
 	top: 50%;
-    transform: translateY(-50%);	
-	background: url("images/pdf.svg") no-repeat center / cover;
-	
+	transform: translateY(-50%);
+	background: url('images/pdf.svg') no-repeat center / cover;
 }
 .blog__data {
 	background-color: rgba(243, 243, 243, 0.56);
@@ -1158,4 +1157,8 @@ button {
 	position: fixed;
 	top: 0;
 	left: auto;
+}
+.comparison__box {
+	left: 5%;
+	bottom: 4%;
 }
