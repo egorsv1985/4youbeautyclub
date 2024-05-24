@@ -57,7 +57,7 @@ $APPLICATION->IncludeComponent(
 	false
 );
 ?>
-<section class="contacts fs-24 <? (TYPE_PAGE == 'CONTACTS') ? 'd-none' : '' ?>">
+<section class="contacts fs-24 <?= (TYPE_PAGE == 'CONTACTS') ? 'd-none' : '' ?>">
 	<div class="container">
 		<div class="row gy-4">
 			<div class="col-12 col-lg-4">

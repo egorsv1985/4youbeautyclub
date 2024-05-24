@@ -22,7 +22,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 <section class="py-5 specialists-main">
 	<div class="container">
 		<? if (TYPE_PAGE == 'MAIN') : ?>
-			<h2 class="mb-5 text-center fs-58 fw-700 d-none">Специалисты</h2>
+			<h2 class="mb-5 text-center fs-58 fw-700">Специалисты</h2>
 		<? endif; ?>
 		<ul class="mb-4 nav nav-tabs" id="specialistsTab" role="tablist">
 			<? foreach ($arResult['SECTIONS'] as $key => $arSection) :
@@ -49,7 +49,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 				);
 				$slideCount = CIBlockElement::GetList(array(), $arFilter, array(), false, array());
 			?>
-				<div class="tab-pane fade <?= $key ? '' : ' active show' ?> position-relative" id="<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="<?= $arSection['ID']; ?>-tab">
+				<div class="tab-pane fade active show position-relative" id="<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="<?= $arSection['ID']; ?>-tab">
 					<div class="mb-5 specialists__slider-<?= $arSection['ID']; ?> slider">
 						<?
 						$APPLICATION->IncludeComponent(

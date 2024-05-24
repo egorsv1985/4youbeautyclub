@@ -12,32 +12,32 @@ $(document).ready(function() {
 			$('header').removeClass('fixed');
 		}
 		
-$('.specialists__slider').slick({
-	infinite: true,
-	dots: true,
-	swipe: true,
-	arrows: true,
+// $('.specialists__slider').slick({
+// 	infinite: true,
+// 	dots: true,
+// 	swipe: true,
+// 	arrows: true,
 	
-	cssEase: 'linear',
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	appendDots: $('.specialists-main .slick__dots'),
+// 	cssEase: 'linear',
+// 	slidesToShow: 3,
+// 	slidesToScroll: 1,
+// 	appendDots: $('.specialists-main .slick__dots'),
 
-	responsive: [
-		{
-			breakpoint: 900,
-			settings: {
-				slidesToShow: 2,
-			},
-		},
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-			},
-		},
-	],
-})
+// 	responsive: [
+// 		{
+// 			breakpoint: 900,
+// 			settings: {
+// 				slidesToShow: 2,
+// 			},
+// 		},
+// 		{
+// 			breakpoint: 768,
+// 			settings: {
+// 				slidesToShow: 1,
+// 			},
+// 		},
+// 	],
+// })
 $('.instruments__slider').slick({
 	infinite: true,
 	dots: true,

@@ -19,13 +19,13 @@ $arFilter = array(
 $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
 ?>
-<ul class="blog__list ">
+<ul class="gap-5 blog__list d-flex flex-column flex-lg-row">
 	<? foreach ($arResult['SECTIONS'] as &$arSection) :
 		$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
 		$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);
 	?>
-		<li id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
-			<a href="<?= $arSection['SECTION_PAGE_URL'] ?>">
+		<li class="" id="<? echo $this->GetEditAreaId($arSection['ID']); ?>">
+			<a href="<?= $arSection['SECTION_PAGE_URL'] ?>" class="text-uppercase fs-24 fw-600">
 				<?= $arSection['NAME']; ?>
 			</a>
 		</li>

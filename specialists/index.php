@@ -1,5 +1,5 @@
 <?
-//define('TYPE_PAGE', 'CONTANER');
+// define('TYPE_PAGE', 'SPECIALISTS');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Специалисты");
 $APPLICATION->SetTitle("Специалисты");

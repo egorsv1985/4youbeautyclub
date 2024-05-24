@@ -26,9 +26,9 @@ $this->setFrameMode(true);
 			?>
 				<li class="py-2 border-2 border-bottom vakansii__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 					<div class=" col fs-24 fw-600">
-						<div class="d-flex justify-content-between align-items-center">
+						<div class="flex-wrap gap-2 flex-md-nowrap d-flex justify-content-between align-items-center">
 							<div class="text-uppercase"><?= $arItem["NAME"]; ?></div>
-							<a href="#" class="p-0 btn top-btn btn-arrow fs-24">подробнее</a>
+							<a href="#" class="p-0 btn top-btn btn-arrow d-flex align-items-center fs-24">подробнее</a>
 						</div>
 					</div>
 				</li>

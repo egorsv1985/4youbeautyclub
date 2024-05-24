@@ -81,7 +81,8 @@ header.fixed {
 	letter-spacing: -3px;
 }
 
-.tab-label:before {
+.tab-label:before,
+.blog__list a:before {
 	content: '';
 	vertical-align: middle;
 	margin-right: 0.875rem;
@@ -533,7 +534,8 @@ button {
 .nav-tabs {
 	border: none;
 }
-.specialists-main .tab-label:before {
+.specialists-main .tab-label:before,
+.blog__list a:before {
 	width: 3.5rem;
 	margin-right: 1.25rem;
 }
@@ -1161,4 +1163,22 @@ button {
 .comparison__box {
 	left: 5%;
 	bottom: 4%;
+}
+.blog__list a{
+	color: #000;
+	opacity: 0.3;
+}
+.blog__list  a:hover {
+	opacity: 1;
+}
+.specialists-main .slick-slide{
+	height: 50%;
+}
+.blog__box{
+	top: 3%;
+	left: 6%;
+	
+}
+.blog__item a{
+	color: #000;
 }

@@ -12,11 +12,21 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 // print_r($arResult);
+$SECTION = end($arResult['SECTION']['PATH']);
+$SECTION_CURRENT = array();
+$SECTION_NAME = ''; // Переменная для хранения имени раздела
+
+$rsSections = CIBlockSection::GetByID($SECTION['ID']);
+if ($arSections = $rsSections->GetNext()) {
+	$SECTION_CURRENT = $arSections;
+	if ($arSections['NAME']) { // Проверяем наличие имени раздела
+		$SECTION_NAME = $arSections['NAME']; // Записываем имя раздела в переменную
+	}
+}
+?>
 ?>
 <div class="row">
-
 	<?
-
 	foreach ($arResult["ITEMS"] as $index => $arItem) :
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -24,12 +34,15 @@ $this->setFrameMode(true);
 		<div class=" col-12 col-lg-6">
 			<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="border border-black d-flex flex-column">
 				<div class="p-4 blog__data fs-24">
-					<span>
+					<span class="text-black opacity-50">
 						<?= $arItem["ACTIVE_FROM"] ?>
 					</span>
 				</div>
-				<div class="mb-4">
+				<div class="mb-4 position-relative">
 					<img class="w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+					<div class="flex-wrap gap-3 comparison__box d-flex position-absolute z-1">
+						<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 blog__name z-1"><?= $SECTION_NAME; ?></span>
+					</div>
 				</div>
 				<div class="px-4 mb-4 fs-24 fw-600 text-uppercase ">
 					<?= $arItem["NAME"]; ?>

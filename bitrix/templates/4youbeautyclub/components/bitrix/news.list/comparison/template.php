@@ -14,6 +14,18 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 $this->setFrameMode(true);
 // print_r($arResult);
+$SECTION = end($arResult['SECTION']['PATH']);
+$SECTION_CURRENT = array();
+$SECTION_NAME = ''; // Переменная для хранения имени раздела
+
+$rsSections = CIBlockSection::GetByID($SECTION['ID']);
+if ($arSections = $rsSections->GetNext()) {
+	$SECTION_CURRENT = $arSections;
+	if ($arSections['NAME']) { // Проверяем наличие имени раздела
+		$SECTION_NAME = $arSections['NAME']; // Записываем имя раздела в переменную
+	}
+}
+
 ?>
 <?
 
@@ -28,7 +40,7 @@ foreach ($arResult["ITEMS"] as $index => $arItem) :
 				<div class="comparison__box-img position-relative fs-22 fw-600">
 					<img class="h-100 w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
 					<div class="flex-wrap gap-3 comparison__box d-flex position-absolute z-1">
-						<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 comparison__name z-1"><?= $arItem["NAME"]; ?></span>
+						<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 comparison__name z-1"><?= $SECTION_NAME; ?></span>
 						<span class="px-4 py-1 bg-white bg-opacity-50 border opacity-50 comparison__data"><?= $arItem["ACTIVE_FROM"] ?></span>
 					</div>
 
