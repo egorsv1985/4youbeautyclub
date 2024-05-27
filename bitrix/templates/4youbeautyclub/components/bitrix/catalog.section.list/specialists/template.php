@@ -30,15 +30,14 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 				$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);
 			?>
 				<li class="nav-item" role="presentation">
-					<a class="p-0 nav-link <?= $key ? '' : ' active' ?>" id="<?= $arSection['ID']; ?>-tab" data-bs-toggle="tab" href="#<?= $arSection['ID']; ?>" role="tab" aria-controls="<?= $arSection['ID']; ?>" aria-selected="true">
-						<div class=" tab-label fs-24"><?= $arSection['NAME']; ?></div>
+					<a class="p-0 nav-link <?=$key ? '' : ' active'?>" id="<?=$arSection['ID'];?>-tab" data-bs-toggle="tab" href="#<?=$arSection['ID'];?>" role="tab" aria-controls="<?=$arSection['ID'];?>" aria-selected="true">
+						<div class=" tab-label fs-24"><?=$arSection['NAME'];?></div>
 					</a>
 				</li>
 			<? endforeach; ?>
 		</ul>
 		<div class="tab-content" id="specialistsTabContent">
-			<?
-			foreach ($arResult['SECTIONS'] as &$arSection) :
+			<? foreach ($arResult['SECTIONS'] as $key => $arSection) :
 				$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
 				$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);
 				$arFilter = array(
@@ -49,8 +48,8 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 				);
 				$slideCount = CIBlockElement::GetList(array(), $arFilter, array(), false, array());
 			?>
-				<div class="tab-pane fade active show position-relative" id="<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="<?= $arSection['ID']; ?>-tab">
-					<div class="mb-5 specialists__slider-<?= $arSection['ID']; ?> slider">
+				<div class="tab-pane fade position-relative <?=$key ? '' : 'show active'?>" id="<?=$arSection['ID'];?>" role="tabpanel" aria-labelledby="<?=$arSection['ID'];?>-tab">
+
 						<?
 						$APPLICATION->IncludeComponent(
 							"bitrix:news.list",
@@ -120,40 +119,7 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 							false
 						);
 						?>
-					</div>
-					<div class="justify-between slick__control slick__control-<?= $arSection['ID']; ?> align-items-center ms-auto d-flex">
-						<span class="fs-27 fw-500 num--first">01</span>
-						<div class="slick__dots-<?= $arSection['ID']; ?> w-100"></div>
-						<span class="fs-27 fw-500 num--last"><? echo ($slideCount < 10) ? str_pad($slideCount, 2, '0', STR_PAD_LEFT) : $slideCount; ?></span>
-					</div>
-				</div>
-				<script>
-					$(document).ready(function() {
-						$('.specialists__slider-<?= $arSection['ID']; ?>').slick({
-							infinite: true,
-							dots: true,
-							swipe: true,
-							arrows: true,
-							cssEase: 'linear',
-							slidesToShow: 3,
-							slidesToScroll: 1,
-							appendDots: $('.specialists-main .slick__dots-<?= $arSection['ID']; ?>'),
-							responsive: [{
-									breakpoint: 900,
-									settings: {
-										slidesToShow: 2,
-									},
-								},
-								{
-									breakpoint: 768,
-									settings: {
-										slidesToShow: 1,
-									},
-								},
-							],
-						})
-					});
-				</script>
+
 			<? endforeach; ?>
 		</div>
 	</div>

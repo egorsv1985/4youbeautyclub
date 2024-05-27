@@ -45,11 +45,11 @@ if (CModule::IncludeModule("victory.options")) {
 			<div class="container ">
 				<div class="py-4 justify-content-between row align-items-center flex-nowrap">
 					<div class="col-6 col-sm-4 col-lg-2">
-						<a href="/">
+						<a href="/" title="home">
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" alt="" class="h-auto mw-100" width="121" height="54">
 						</a>
 					</div>
-					<div class="col-lg-7 col-1 fw-600">
+					<div class="col-lg-6 col-1 fw-600">
 						<ul class="py-3 text-center main-menu text-uppercase">
 							<li><a href="/about/">о нас</a></li>
 							<li><a href="/uslugi/">услуги</a></li>
@@ -60,11 +60,12 @@ if (CModule::IncludeModule("victory.options")) {
 						</ul>
 					</div>
 					<div class="col-6 col-lg-3 text-end d-none d-sm-block">
-						<a href="#" class="btn btn-outline-dark top-btn fs-24 text-nowrap">Оставить заявку</a>
+						<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="btn-header btn btn-outline-dark top-btn fs-24 text-nowrap">Оставить заявку</button>
+
 					</div>
 					<div class="col-2 col-sm-1">
 						<div class="d-flex d-lg-none h-100 align-items-center">
-							<button type="button" class="header__burger burger w-100">
+							<button type="button" class="header__burger burger w-100" title="home">
 								<span class="burger__inner position-relative w-100 h-100 d-flex justify-content-center align-items-center">
 									<span></span>
 								</span>
@@ -76,22 +77,22 @@ if (CModule::IncludeModule("victory.options")) {
 			</div>
 		</header>
 		<? if (TYPE_PAGE == 'MAIN') : ?>
-			<ul class="gap-4 d-flex flex-column align-items-center justify-content-between header__social">
-				<li>
-					<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram_' . SITE_ID); ?>" target="_blank">
-						<img src="<?= SITE_TEMPLATE_PATH ?>/images/telegram.svg" alt="telegram" class="">
-					</a>
-				</li>
-				<li>
-					<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" target="_blank">
-						<img src="<?= SITE_TEMPLATE_PATH ?>/images/instagram.svg" alt="instagram" class="">
-					</a>
-				</li>
-			</ul>
-			<section class="pb-5 main-offer">
-				<div class="container mb-5 position-relative">
-					<div class="row">
-						<div class="col-md-6 offer-text">
+		<section class="pb-5 main-offer">
+			<div class="container mb-5 position-relative">
+					<ul class="gap-4 d-flex flex-column align-items-center justify-content-between header__social">
+						<li>
+							<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram' . SITE_ID); ?>" target="_blank">
+								<img src="<?= SITE_TEMPLATE_PATH ?>/images/telegram.svg" alt="telegram" class="">
+							</a>
+						</li>
+						<li>
+							<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" target="_blank">
+								<img src="<?= SITE_TEMPLATE_PATH ?>/images/instagram.svg" alt="instagram" class="">
+							</a>
+						</li>
+					</ul>
+				<div class="row">
+					<div class="col-md-6 offer-text">
 							<div class="mb-4 tab-label fs-18">Салон красоты</div>
 							<h1 class="mb-4 text-uppercase">
 								4you
@@ -104,7 +105,7 @@ if (CModule::IncludeModule("victory.options")) {
 								</p>
 							</div>
 							<div class="mt-5 btns">
-								<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Оставить заявку</a>
+								<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Оставить заявку</button>								
 							</div>
 						</div>
 					</div>

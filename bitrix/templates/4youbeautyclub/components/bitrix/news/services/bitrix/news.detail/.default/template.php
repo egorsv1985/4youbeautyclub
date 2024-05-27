@@ -16,8 +16,9 @@ if ($arResult["DETAIL_PICTURE"]) {
 	$this->SetViewTarget('topPage');
 	if (CModule::IncludeModule("millcom.phpthumb"))
 		$arResult["DETAIL_PICTURE"]['WEBP'] = CMillcomPhpThumb::generateImg($arResult["DETAIL_PICTURE"]["SRC"], 3);
+	$arResult["DETAIL_PICTURE"]['PNG'] = CMillcomPhpThumb::generateImg($arResult["DETAIL_PICTURE"]["SRC"], 16);
 ?>
-	<div class="text-center cover-page" style="background-image: url('<?= $arResult["DETAIL_PICTURE"]["WEBP"]; ?>')">
+	<div class="text-center cover-page" style="background-image: url('<?= $arResult["DETAIL_PICTURE"]["WEBP"]; ?>'), url('<?= $arResult["DETAIL_PICTURE"]["PNG"]; ?>');">
 		<div class="py-5 blackout">
 			<div class="container py-5">
 				<div class="mt-5 h1 fs-70 fw-700"><?= $arResult['NAME'] ?></div>
@@ -27,7 +28,7 @@ if ($arResult["DETAIL_PICTURE"]) {
 					</p>
 				<? endif; ?>
 				<div class="mt-5 btns">
-					<a href="#" class="px-4 py-3 btn btn-outline-light top-btn btn-arrow fs-24">Записаться на приём</a>
+					<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="px-4 py-3 btn btn-outline-light top-btn btn-arrow fs-24">Записаться на приём</button>
 				</div>
 			</div>
 		</div>
@@ -53,7 +54,7 @@ if ($arResult["DETAIL_PICTURE"]) {
 							<?= is_numeric($arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key]) ? number_format($arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key], 0, '.', ' ') . '₽' : $arResult['PROPERTIES']['PRICES']['DESCRIPTION'][$key]; ?>
 						</div>
 						<div class="col-md-3 text-end">
-							<a href="#" class="p-0 btn top-btn btn-arrow fs-24">записаться</a>
+							<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="p-0 btn top-btn btn-arrow fs-24">записаться</button>							
 						</div>
 					</div>
 				</div>

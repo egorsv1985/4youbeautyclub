@@ -20,6 +20,10 @@ $this->setFrameMode(true);
 			foreach ($arResult["ITEMS"] as $arItem) :
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+				if (CModule::IncludeModule("millcom.phpthumb")) {
+					$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 7);
+					$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 8);
+				}
 			?>
 				<div class="slider__item">
 					<div class="row">
@@ -31,7 +35,10 @@ $this->setFrameMode(true);
 						</div>
 						<div class="col-12 col-md-6 position-relative d-none d-lg-block">
 							<div class="position-absolute instruments__box-image">
-								<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+								<picture>
+									<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="h-100 w-100" width="764" height="876" />
+								</picture>
+								
 							</div>
 						</div>
 					</div>

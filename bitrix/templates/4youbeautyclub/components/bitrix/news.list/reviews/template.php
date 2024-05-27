@@ -28,12 +28,18 @@ $itemCount = CIBlockElement::GetList(array(), $arFilter, array());
 			foreach ($arResult["ITEMS"] as $arItem) :
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+				if (CModule::IncludeModule("millcom.phpthumb")) {
+					$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 12);
+					$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 11);
+				}
 
 			?>
 				<div class="px-4 slider__item fs-24 position-relative h-50">
 					<div class="gap-4 mb-4 d-flex">
 						<div class="">
-							<img class="w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+							<picture>
+								<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="h-100 w-100" width="90" height="90" />
+							</picture>							
 						</div>
 						<div class="gap-3 d-flex flex-column fw-600 text-uppercase">
 							<div class=""><?= $arItem["NAME"] ?></div>

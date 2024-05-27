@@ -14,7 +14,7 @@ $APPLICATION->SetTitle("О нас");
 				<p>Мы используем передовые технологии и профессиональное оборудование для максимально эффективных и безопасных процедур.</p>
 				<p>Мы гарантируем вам не только ухоженность, но и радость от каждой посещённой нами процедуры. Доверьтесь профессионалам и откройте для себя новое измерение косметологии!</p>
 				<div class="my-5 btns">
-					<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Оставить заявку</a>
+					<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Оставить заявку</button>					
 				</div>
 			</div>
 			<div class="col-12 col-lg-8 d-none d-lg-block ">

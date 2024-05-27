@@ -1,4 +1,4 @@
-<?php
+<?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
@@ -36,7 +36,12 @@ if (is_array($arResult['SECTION']['PATH']) && !empty($arResult['SECTION']['PATH'
 ?>
 
 <div class="mb-5 row gy-3">
-	<?php foreach ($arResult["ITEMS"] as $index => $arItem) : ?>
+	<? foreach ($arResult["ITEMS"] as $index => $arItem) :
+		if (CModule::IncludeModule("millcom.phpthumb")) {
+			$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 9);
+			$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 10);
+		}
+	?>
 		<div class="col-12 col-lg-6 blog__item">
 			<div class="gap-3 border border-black d-flex flex-column h-100">
 				<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="d-flex flex-column h-100">
@@ -46,7 +51,9 @@ if (is_array($arResult['SECTION']['PATH']) && !empty($arResult['SECTION']['PATH'
 						</span>
 					</div>
 					<div class="mb-4 position-relative">
-						<img class="w-100" src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>">
+						<picture>
+							<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="h-100 w-100" width="595" height="380" />
+						</picture>						
 						<div class="flex-wrap gap-3 blog__box d-flex position-absolute z-1 fs-22 fw-600">
 							<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 blog__name z-1"><?= $SECTION_NAME; ?></span>
 						</div>
@@ -63,5 +70,5 @@ if (is_array($arResult['SECTION']['PATH']) && !empty($arResult['SECTION']['PATH'
 				</div>
 			</div>
 		</div>
-	<?php endforeach; ?>
+	<? endforeach; ?>
 </div>

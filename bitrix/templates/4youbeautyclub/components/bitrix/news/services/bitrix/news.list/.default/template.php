@@ -97,13 +97,18 @@ if ($arSections = $rsSections->GetNext()) {
 			<? foreach ($arResult["ITEMS"] as $arItem) :
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-				if (CModule::IncludeModule("millcom.phpthumb"))
-					$arItem["PREVIEW_PICTURE"]['WEBP'] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 2);
+
+				if (CModule::IncludeModule("millcom.phpthumb")) {
+					$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 2);
+					$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 15);
+				}
 			?>
 				<div class="col-md-6 service-item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 					<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
 						<span class="image d-block">
-							<img class="h-auto w-100" src="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" />
+							<picture>
+								<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>" class="h-auto w-100" width="385" height="445" />
+							</picture>
 						</span>
 						<span class="px-4 my-4 name d-block fs-24 fw-600">
 							<strong class="d-block text-uppercase"><?= $arItem["NAME"] ?></strong>
