@@ -5,15 +5,16 @@ $APPLICATION->SetPageProperty("title", "блог");
 $APPLICATION->SetTitle("Полезные статьи");
 ?>
 <div class="mb-2 fs-24">
-	 Мы&nbsp;используем передовые технологии и&nbsp;профессиональное оборудование для&nbsp;максимально эффективных и&nbsp;безопасных процедур. !
+	Мы&nbsp;используем передовые технологии и&nbsp;профессиональное оборудование для&nbsp;максимально эффективных и&nbsp;безопасных процедур. !
 </div>
 <div class="mb-5 fs-24">
-	  Мы&nbsp;гарантируем вам&nbsp;не&nbsp;только ухоженность, но&nbsp;и&nbsp;радость от&nbsp;каждой посещённой нами процедуры. Доверьтесь профессионалам и&nbsp;откройте для&nbsp;себя новое измерение косметологии!
+	Мы&nbsp;гарантируем вам&nbsp;не&nbsp;только ухоженность, но&nbsp;и&nbsp;радость от&nbsp;каждой посещённой нами процедуры. Доверьтесь профессионалам и&nbsp;откройте для&nbsp;себя новое измерение косметологии!
 </div>
- <?$APPLICATION->IncludeComponent(
+<?
+$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
 	"news",
-	Array(
+	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"CACHE_FILTER" => "N",
@@ -28,19 +29,19 @@ $APPLICATION->SetTitle("Полезные статьи");
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "CONTENT",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"NAME",1=>"",),
+		"SECTION_FIELDS" => array(0 => "NAME", 1 => "",),
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
+		"SECTION_USER_FIELDS" => array(0 => "", 1 => "",),
 		"SHOW_PARENT_NAME" => "Y",
 		"TOP_DEPTH" => "4",
 		"VIEW_MODE" => "LINE"
 	)
-);?><br>
- <br>
- <?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	"blog", 
+);
+?>
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news",
+	"blog",
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -80,7 +81,7 @@ $APPLICATION->SetTitle("Полезные статьи");
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "CONTENT",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",
 			1 => "",
@@ -128,5 +129,6 @@ $APPLICATION->SetTitle("Полезные статьи");
 		)
 	),
 	false
-);?><br>
- <br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);
+?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

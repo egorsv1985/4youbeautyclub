@@ -5,8 +5,7 @@ $APPLICATION->SetPageProperty("title", "Контакты");
 $APPLICATION->SetTitle("Контакты");
 define('TYPE_PAGE', 'CONTACTS');
 ?>
-<section class="contacts fs-24">
-	
+<section class="contacts fs-24">	
 		<div class="row gy-4">
 			<div class="col-12 col-lg-4">
 				<h1 class="mb-5 fs-58 fw-700">Контакты</h1>
@@ -50,8 +49,6 @@ define('TYPE_PAGE', 'CONTACTS');
 					false
 				); ?>
 			</div>
-		</div>
-	
+		</div>	
 </section>
-
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
