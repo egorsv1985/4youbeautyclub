@@ -54,21 +54,21 @@ ul {
 }
 
 header {
-	border-top: 2rem solid #000;
+	/* border-top: 2rem solid #000; */
 	z-index: 50;
 	position: absolute;
 	transition: background 0.3s;
 }
 header.fixed {
 	position: fixed;
-	border-top-width: 0;
+	/* border-top-width: 0; */
 	background: rgba(255, 255, 255, 0.9);
-	z-index: 20;
+	z-index: 55;
 }
-header .btn-header{
+header .btn-header {
 	display: none;
 }
-header.fixed .btn-header{
+header.fixed .btn-header {
 	display: block;
 }
 .main-offer .offer-text {
@@ -102,7 +102,7 @@ header.fixed .btn-header{
 	height: 100%;
 	position: absolute;
 	top: 0;
-	background: #ECD9C5  url('images/main_image-bg.png') 100% 50% no-repeat;
+	background: #ecd9c5 url('images/main_image-bg.png') 100% 50% no-repeat;
 	background-size: auto 100%;
 	left: 28%;
 	right: -7rem;
@@ -114,7 +114,7 @@ header.fixed .btn-header{
 	top: 0;
 	left: 100%;
 	height: 100%;
-	background: #ECD9C5;
+	background: #ecd9c5;
 	width: 100vw;
 	content: '';
 }
@@ -319,12 +319,18 @@ footer {
 }
 footer a {
 	color: inherit;
+	opacity: 0.7;
+	transition: all 0.3s ease;
 }
 footer a:hover {
 	color: #fff;
+	opacity: 1;
 }
 .f-title {
 	color: #b48533;
+}
+.f-title a {
+	opacity: 1;
 }
 .f-menu {
 	margin: 0;
@@ -425,10 +431,10 @@ footer hr {
 	width: 100%;
 	color: #fff;
 	border: 1.5px solid rgba(255, 255, 255, 0.8);
+	transition: all 0.5s ease-in-out;
 }
-.news-item:hover{
-	background-color: #7A7878F2;
-	border: 4px solid #000;
+.news-item:hover {
+	background-color: #7a7878f2;
 }
 .news-right .news-item.max-content {
 	max-width: max-content;
@@ -568,7 +574,7 @@ button {
 	letter-spacing: 0.0625rem;
 }
 .slider__post {
-		color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 0, 0, 0.8);
 }
 .slick-arrow {
 	z-index: 10;
@@ -671,8 +677,12 @@ button {
 	top: 0;
 	bottom: 0;
 }
+
 .instruments__slider .slick-dots {
-	position: relative;
+	position: absolute;
+	bottom: 9%;
+	transform: translateX(-50%);
+	left: 50%;
 	z-index: 50;
 	display: flex;
 	justify-content: center;
@@ -704,7 +714,7 @@ button {
 	background-color: #b48533;
 }
 .instruments__box-image {
-	top: -22%;
+	top: -16%;
 	left: -14%;
 }
 
@@ -718,8 +728,8 @@ button {
 .instruments .slick-arrow {
 	width: 100px;
 	height: 150px;
-	bottom: -10%;
-	right: 6%;
+	bottom: 0;
+	right: 12%;
 	top: inherit;
 	background: url('images/arrow_slider_white.svg') 80% 50% no-repeat;
 	background-color: #212121;
@@ -747,13 +757,17 @@ button {
 }
 
 .instruments__slider {
-	margin-bottom: 120px;
+	/* margin-bottom: 120px; */
+	position: inherit;
 	z-index: 1;
+}
+.instruments .slick-slide {
+	/* height: inherit; */
 }
 .products {
 	background-color: #ecd9c5;
-	top: -4.625rem;
-	padding-top: 5rem;
+	/* top: -4.625rem; */
+	padding-block: 5rem;
 }
 .products .slick-dots button {
 	background-color: #fff;
@@ -844,10 +858,10 @@ button {
 	color: #7c7c7c;
 }
 .contacts-mail {
-	background: url('images/mail.svg') no-repeat 0 50%;
+	background: url('images/mail.svg') no-repeat 0 50%/ 2.1875rem;
 }
 .contacts-phone {
-	background: url('images/phone.svg') no-repeat 0 50%;
+	background: url('images/phone.svg') no-repeat 0 50%/ 2.1875rem;
 }
 .burger {
 	height: 30px;
@@ -880,6 +894,9 @@ button {
 }
 .burger__inner span {
 	top: calc(50% - 1px);
+}
+.open body{
+	overflow: hidden;
 }
 .open .burger__inner span {
 	transform: scale(0);
@@ -1056,7 +1073,7 @@ button {
 	height: 100%;
 }
 .gallery__slider .slick-slide {
-	height: inherit;
+	/* height: inherit; */
 }
 .gallery__box p {
 	font-size: 24px;
@@ -1107,7 +1124,7 @@ button {
 }
 
 .documents__item a {
-	padding-left: 6.875rem;
+	padding-left: 5.625rem;
 	padding-right: 0.75rem;
 }
 .documents__item a::after {
@@ -1127,7 +1144,7 @@ button {
 }
 
 .documents__item a::before {
-	content: '';
+	/* content: ''; */
 	display: block;
 	position: absolute;
 	height: 4.0625rem;
@@ -1184,7 +1201,7 @@ button {
 	opacity: 1;
 }
 .specialists-main .slick-slide {
-	height: max-content;
+	/* height: max-content; */
 }
 .blog__box {
 	top: 3%;
@@ -1195,4 +1212,14 @@ button {
 }
 .modal-content {
 	background-color: #212121;
+}
+.ymaps-layers-pane {
+	filter: grayscale(1);
+	-ms-filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(1);
+	-o-filter: grayscale(1);
+}
+.slick-slide{
+	height: inherit;
 }

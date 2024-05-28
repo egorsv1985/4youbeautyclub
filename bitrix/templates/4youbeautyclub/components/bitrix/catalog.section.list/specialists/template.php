@@ -39,18 +39,10 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 		<div class="tab-content" id="specialistsTabContent">
 			<? foreach ($arResult['SECTIONS'] as $key => $arSection) :
 				$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
-				$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);
-				$arFilter = array(
-					"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-					"SECTION_ID" => $arSection["ID"],
-					"INCLUDE_SUBSECTIONS" => "Y",
-					"ACTIVE" => "Y"
-				);
-				$slideCount = CIBlockElement::GetList(array(), $arFilter, array(), false, array());
-			?>
+				$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete);			
+				?>
 				<div class="tab-pane fade position-relative <?=$key ? '' : 'show active'?>" id="<?=$arSection['ID'];?>" role="tabpanel" aria-labelledby="<?=$arSection['ID'];?>-tab">
-
-						<?
+									<?
 						$APPLICATION->IncludeComponent(
 							"bitrix:news.list",
 							"specialists",
@@ -120,7 +112,8 @@ $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELET
 						);
 						?>
 
+</div>
 			<? endforeach; ?>
-		</div>
+	</div>
 	</div>
 </section>

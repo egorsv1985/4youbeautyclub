@@ -34,7 +34,7 @@ $itemCount = CIBlockElement::GetList(array(), $arFilter, array());
 				}
 
 			?>
-				<div class="px-4 slider__item fs-24 position-relative h-50">
+				<div class="px-4 slider__item fs-24 position-relative">
 					<div class="gap-4 mb-4 d-flex">
 						<div class="">
 							<picture>

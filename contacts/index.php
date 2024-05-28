@@ -1,26 +1,26 @@
 <?
 //define('TYPE_PAGE', 'CONTANER');
+define('TYPE_PAGE', 'CONTACTS');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Контакты");
 $APPLICATION->SetTitle("Контакты");
-define('TYPE_PAGE', 'CONTACTS');
 ?>
-<section class="contacts fs-24">	
+<section class="contacts fs-24">
 		<div class="row gy-4">
 			<div class="col-12 col-lg-4">
 				<h1 class="mb-5 fs-58 fw-700">Контакты</h1>
 				<div class="d-flex flex-column">
-					<h3>Адрес</h3>
-					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID); ?></p>
-					<h3>Режим работы:</h3>
-					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('schedule_' . SITE_ID); ?></p>
+					<h3 class=" text-uppercase">Адрес</h3>
+					<p><?=\Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID);?></p>
+					<h3 class=" text-uppercase">Режим работы:</h3>
+					<p><?=\Victory\Options\CVictoryOptions::getOptionValue('schedule_' . SITE_ID);?></p>
 				</div>
 				<div class="gap-4 d-flex flex-column">
 					<?
 					$tel = \Victory\Options\CVictoryOptions::getOptionValue('tel_' . SITE_ID);
 					?>
-					<a href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $tel); ?>" class="d-block fs-24 text-nowrap ps-5 contacts-phone"><?= $tel; ?></a>
-					<a href="mailto:<?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?></a>
+					<a href="tel:<?=str_replace(array(' ', '(', ')', '-'), '', $tel);?>" class="d-block fs-24 text-nowrap ps-5 contacts-phone"><?=$tel;?></a>
+					<a href="mailto:<?=\Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID);?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?=\Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID);?></a>
 				</div>
 			</div>
 			<div class="col-12 col-lg-8">
@@ -49,6 +49,6 @@ define('TYPE_PAGE', 'CONTACTS');
 					false
 				); ?>
 			</div>
-		</div>	
+		</div>
 </section>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

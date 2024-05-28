@@ -49,7 +49,7 @@ if (CModule::IncludeModule("victory.options")) {
 							<img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" alt="" class="h-auto mw-100" width="121" height="54">
 						</a>
 					</div>
-					<div class="col-lg-6 col-1 fw-600">
+					<div class="col-lg-7 col-1 fw-600">
 						<ul class="py-3 text-center main-menu text-uppercase">
 							<li><a href="/about/">о нас</a></li>
 							<li><a href="/uslugi/">услуги</a></li>
@@ -59,7 +59,7 @@ if (CModule::IncludeModule("victory.options")) {
 							<li><a href="/blog/">блог</a></li>
 						</ul>
 					</div>
-					<div class="col-6 col-lg-3 text-end d-none d-sm-block">
+					<div class="col-6 col-lg-3 offset-lg-1 d-none d-sm-block">
 						<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="btn-header btn btn-outline-dark top-btn fs-24 text-nowrap">Оставить заявку</button>
 
 					</div>

@@ -99,5 +99,5 @@ $slideCount = ceil($itemCount / 2);
 			</div>
 		</div>
 	</div>
-	
+
 </section>

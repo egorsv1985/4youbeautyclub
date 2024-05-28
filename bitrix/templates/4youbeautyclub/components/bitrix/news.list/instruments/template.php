@@ -13,9 +13,9 @@
 $this->setFrameMode(true);
 // print_r($arResult);
 ?>
-<section class="instruments">
+<section class="pb-5 instruments position-relative">
 	<div class="container">
-		<div class=" instruments__slider slider position-relative">
+		<div class=" instruments__slider slider">
 			<?
 			foreach ($arResult["ITEMS"] as $arItem) :
 				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));

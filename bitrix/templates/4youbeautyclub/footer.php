@@ -63,44 +63,40 @@ $APPLICATION->IncludeComponent(
 			<div class="col-12 col-lg-4">
 				<h2 class="mb-5 fs-58 fw-700">Контакты</h2>
 				<div class="d-flex flex-column">
-					<h3>Адрес</h3>
-					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID); ?></p>
-					<h3>Режим работы:</h3>
-					<p><?= \Victory\Options\CVictoryOptions::getOptionValue('schedule_' . SITE_ID); ?></p>
+					<h3 class=" text-uppercase">Адрес</h3>
+					<p class="mb-4"><?= \Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID); ?></p>
+					<h3 class=" text-uppercase">Режим работы:</h3>
+					<p class="mb-5"><?= \Victory\Options\CVictoryOptions::getOptionValue('schedule_' . SITE_ID); ?></p>
 				</div>
 				<div class="gap-4 d-flex flex-column">
 					<?
 					$tel = \Victory\Options\CVictoryOptions::getOptionValue('tel_' . SITE_ID);
 					?>
-					<a href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $tel); ?>" class="d-block fs-24 text-nowrap ps-5 contacts-phone"><?= $tel; ?></a>
-					<a href="mailto:<?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?= \Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID); ?></a>
+					<a href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $tel); ?>" class="py-1 d-block fs-24 text-nowrap ps-5 contacts-phone"><?= $tel; ?></a>
+					<a href="mailto:<?= \Victory\Options\CVictoryOptions::getOptionValue('email_' . SITE_ID); ?>" class="py-1 d-block text-nowrap fs-24 ps-5 contacts-mail"><?= \Victory\Options\CVictoryOptions::getOptionValue('email_' . SITE_ID); ?></a>
 				</div>
 			</div>
 			<div class="col-12 col-lg-8">
 				<? $APPLICATION->IncludeComponent(
-					"bitrix:map.yandex.view",
-					".default",
-					array(
-						"COMPONENT_TEMPLATE" => ".default",
-						"INIT_MAP_TYPE" => "MAP",
-						"MAP_DATA" => "a:3:{s:10:\"yandex_lat\";d:55.703505;s:10:\"yandex_lon\";d:37.731057;s:12:\"yandex_scale\";i:12;}",
-						"MAP_WIDTH" => "100%",
-						"MAP_HEIGHT" => "475",
-						"CONTROLS" => array(
-							0 => "ZOOM",
-							1 => "SMALLZOOM",
-
-						),
-						"OPTIONS" => array(
-							0 => "ENABLE_SCROLL_ZOOM",
-							1 => "ENABLE_DBLCLICK_ZOOM",
-							2 => "ENABLE_DRAGGING",
-						),
-						"MAP_ID" => "",
-						"API_KEY" => ""
-					),
-					false
-				); ?>
+	"bitrix:map.yandex.view", 
+	"main-map", 
+	array(
+		"COMPONENT_TEMPLATE" => "main-map",
+		"INIT_MAP_TYPE" => "MAP",
+		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:55.6960885381469;s:10:\"yandex_lon\";d:37.74040369185958;s:12:\"yandex_scale\";i:18;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:37.74084169848631;s:3:\"LAT\";d:55.6963312257396;s:4:\"TEXT\";s:25:\"ул. Любимова, 6\";}}}",
+		"MAP_WIDTH" => "100%",
+		"MAP_HEIGHT" => "475",
+		"CONTROLS" => array(
+			0 => "ZOOM",
+		),
+		"OPTIONS" => array(
+			0 => "ENABLE_DBLCLICK_ZOOM",
+		),
+		"MAP_ID" => "",
+		"API_KEY" => ""
+	),
+	false
+); ?>
 			</div>
 		</div>
 	</div>
@@ -112,7 +108,7 @@ $APPLICATION->IncludeComponent(
 		<div class="text-center row gy-4 text-md-start">
 			<div class="col-lg-3 col-md-6 col-12">
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/logo.png" alt="" class="h-auto mw-100" width="121" height="54">
-				<div class="py-2 my-4 fs-18">
+				<div class="py-2 my-4 opacity-50 fs-18">
 					© <?= date('Y'); ?> 4YOU Beauty club
 				</div>
 				<img src="<?= SITE_TEMPLATE_PATH; ?>/images/f-icon.svg" alt="" class="w-60 d-none d-md-inline">
@@ -158,14 +154,14 @@ $APPLICATION->IncludeComponent(
 				<div class="mb-3 f-title text-uppercase fw-500 fs-24"><a href="/o_nas/">О клинике</a></div>
 				<div class="pb-2 mb-4 fs-22">ООО «ФОЮ» Лицензия Л041-01126-23/00588911 от 10.06.2021 г. ИНН 2364019749</div>
 				<div class="mb-3 f-title text-uppercase fw-500 fs-24">мы в соц.Сетях</div>
-				<ul class="gap-4 d-flex align-items-center justify-content-center justify-content-lg-start">
+				<ul class="gap-4 d-flex align-items-center justify-content-center justify-content-md-start">
 					<li>
-						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram_' . SITE_ID); ?>" target="_blank">
+						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('telegram_' . SITE_ID); ?>" class="opacity-100 " target="_blank">
 							<img src="<?= SITE_TEMPLATE_PATH ?>/images/telegram-white.svg" alt="telegram" class="">
 						</a>
 					</li>
 					<li>
-						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" target="_blank">
+						<a href="<?= \Victory\Options\CVictoryOptions::getOptionValue('instagram_' . SITE_ID); ?>" class="opacity-100 " target="_blank">
 							<img src="<?= SITE_TEMPLATE_PATH ?>/images/instagram-white.svg" alt="instagram" class="">
 						</a>
 					</li>

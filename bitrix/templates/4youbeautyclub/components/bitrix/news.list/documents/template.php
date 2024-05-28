@@ -21,8 +21,8 @@ $this->setFrameMode(true);
 		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
-		<li class="py-4 border border-2 border-black documents__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-			<a href="#" class="text-black d-block fs-24 fw-600 text-uppercase position-relative"><?= $arItem["~NAME"]; ?></a>
+		<li class="py-4 border border-2 border-black ps-4 d-flex align-items-center p documents__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+			<a href="#" class="text-black d-block fs-24 fw-600 text-uppercase position-relative" style=" background: url('<?= SITE_TEMPLATE_PATH; ?>/images/pdf.svg') no-repeat left center  / 65px;"><?= $arItem["~NAME"]; ?></a>
 		</li>
 	<? endforeach; ?>
 </ul>
