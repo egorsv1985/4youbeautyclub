@@ -1,6 +1,5 @@
 <?php
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
-{
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 	die();
 }
 /** @var array $arParams */
@@ -16,8 +15,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "services", Array(
-	"COMPONENT_TEMPLATE" => ".default",
+<?
+$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list",
+	"services",
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "CONTENT",	// Тип инфоблока
 		"IBLOCK_ID" => "1",	// Инфоблок
 		"SECTION_ID" => "0",	// ID раздела
@@ -48,4 +51,5 @@ $this->setFrameMode(true);
 		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
 	),
 	false
-);?>
+);
+?>

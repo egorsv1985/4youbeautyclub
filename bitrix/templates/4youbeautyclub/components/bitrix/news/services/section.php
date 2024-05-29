@@ -1,7 +1,4 @@
-<?php
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
-	die();
-}
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -14,15 +11,48 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-// print_r($arResult);
 ?>
 
-<div class="mb-2 fs-24">
-	Мы&nbsp;используем передовые технологии и&nbsp;профессиональное оборудование для&nbsp;максимально эффективных и&nbsp;безопасных процедур. !
-</div>
-<div class="mb-5 fs-24">
-	Мы&nbsp;гарантируем вам&nbsp;не&nbsp;только ухоженность, но&nbsp;и&nbsp;радость от&nbsp;каждой посещённой нами процедуры. Доверьтесь профессионалам и&nbsp;откройте для&nbsp;себя новое измерение косметологии!
-</div>
+<? if ($arParams["USE_RSS"] == "Y") : ?>
+	<?
+	$rss_url = CComponentEngine::makePathFromTemplate($arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["rss_section"], array_map("urlencode", $arResult["VARIABLES"]));
+	if (method_exists($APPLICATION, 'addheadstring'))
+		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="' . $rss_url . '" href="' . $rss_url . '" />');
+	?>
+	<a href="<?= $rss_url ?>" title="rss" target="_self"><img alt="RSS" src="<?= $templateFolder ?>/images/gif-light/feed-icon-16x16.gif" border="0" align="right" /></a>
+<? endif ?>
+
+<? if ($arParams["USE_SEARCH"] == "Y") : ?>
+	<?= GetMessage("SEARCH_LABEL") ?><? $APPLICATION->IncludeComponent(
+																		"bitrix:search.form",
+																		"flat",
+																		array(
+																			"PAGE" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["search"]
+																		),
+																		$component
+																	); ?>
+	<br />
+<? endif ?>
+<? if ($arParams["USE_FILTER"] == "Y") : ?>
+	<? $APPLICATION->IncludeComponent(
+		"bitrix:catalog.filter",
+		"",
+		array(
+			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+			"FILTER_NAME" => $arParams["FILTER_NAME"],
+			"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+			"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+			"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+			"CACHE_TIME" => $arParams["CACHE_TIME"],
+			"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+			"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+		),
+		$component
+	);
+	?>
+	<br />
+<? endif ?>
 <?
 $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
@@ -59,11 +89,10 @@ $APPLICATION->IncludeComponent(
 	false
 );
 ?>
-
-<?$APPLICATION->IncludeComponent(
+<? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
-	Array(
+	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 		"NEWS_COUNT" => $arParams["NEWS_COUNT"],
@@ -111,9 +140,9 @@ $APPLICATION->IncludeComponent(
 
 		"PARENT_SECTION" => $arResult["VARIABLES"]["SECTION_ID"],
 		"PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
-		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
-		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
-		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
+		"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["detail"],
+		"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
+		"IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],
 	),
 	$component
-);?>
+); ?>

@@ -88,5 +88,13 @@ $slideCount = count($arResult["ITEMS"]);
 
 			],
 		});
+		var $sliderSpecialists = $('.specialists__slider-<?= $SECTION_ID; ?>')
+
+		$sliderSpecialists.on('afterChange', function(_, slick, currentSlide) {
+			var currentSlideIndex = currentSlide / slick.options.slidesToScroll + 1
+			$('.slick__control-<?= $SECTION_ID; ?> .num--first').text(
+				currentSlideIndex < 10 ? '0' + currentSlideIndex : currentSlideIndex
+			)
+		})
 	});
 </script>

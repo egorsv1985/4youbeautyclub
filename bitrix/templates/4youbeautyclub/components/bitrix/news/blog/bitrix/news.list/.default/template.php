@@ -13,49 +13,35 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-
-// Проверяем, существует ли массив $arResult['SECTION']['PATH'] и не пуст ли он
-if (is_array($arResult['SECTION']['PATH']) && !empty($arResult['SECTION']['PATH'])) {
-	// Получаем последний элемент массива $arResult['SECTION']['PATH']
-	$SECTION = end($arResult['SECTION']['PATH']);
-	$SECTION_CURRENT = array();
-	$SECTION_NAME = ''; // Переменная для хранения имени раздела
-
-	$rsSections = CIBlockSection::GetByID($SECTION['ID']);
-	if ($arSections = $rsSections->GetNext()) {
-		$SECTION_CURRENT = $arSections;
-		if ($arSections['NAME']) { // Проверяем наличие имени раздела
-			$SECTION_NAME = $arSections['NAME']; // Записываем имя раздела в переменную
-		}
-	}
-} else {
-	// Обработка случая, когда $arResult['SECTION']['PATH'] пуст или не существует
-	// Возможно, здесь нужно предпринять определенные действия, в зависимости от логики вашего компонента
-	$SECTION_NAME = 'Раздел не найден'; // Пример сообщения об ошибке или заполнения по умолчанию
-}
+// print_r($arResult);
 ?>
-
 <div class="mb-5 row gy-3">
 	<? foreach ($arResult["ITEMS"] as $index => $arItem) :
-		if (CModule::IncludeModule("millcom.phpthumb")) {
-			$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 9);
-			$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 10);
-		}
+
+		$res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
+		if ($ar_res = $res->GetNext())
+			// echo $ar_res['NAME'];
+
+			if (CModule::IncludeModule("millcom.phpthumb")) {
+				$arItem["PREVIEW_PICTURE"]["WEBP"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 9);
+				$arItem["PREVIEW_PICTURE"]["PNG"] = CMillcomPhpThumb::generateImg($arItem["PREVIEW_PICTURE"]["SRC"], 10);
+			}
 	?>
+
 		<div class="col-12 col-lg-6 blog__item">
 			<div class="gap-3 border border-black d-flex flex-column h-100">
 				<a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="d-flex flex-column h-100">
 					<div class="p-4 blog__data fs-24">
-						<span class="opacity-50">
+						<span class="opacity-75">
 							<?= $arItem["ACTIVE_FROM"] ?>
 						</span>
 					</div>
 					<div class="mb-4 position-relative">
 						<picture>
 							<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="h-100 w-100" width="595" height="380" />
-						</picture>						
+						</picture>
 						<div class="flex-wrap gap-3 blog__box d-flex position-absolute z-1 fs-22 fw-600">
-							<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 blog__name z-1"><?= $SECTION_NAME; ?></span>
+							<span class="px-4 py-1 bg-white bg-opacity-50 border border-black opacity-50 blog__name z-1"><?= $ar_res['NAME'] ?></span>
 						</div>
 					</div>
 					<div class="px-4 mb-4 opacity-75 fs-24 fw-600 text-uppercase">

@@ -98,11 +98,11 @@ $(document).ready(function () {
 				},
 			],
 		})
-		var $slider = $('.products__slider')
+		var $sliderProducts = $('.products__slider')
 
-		$slider.on('afterChange', function (_, slick, currentSlide) {
+		$sliderProducts.on('afterChange', function (_, slick, currentSlide) {
 			var currentSlideIndex = currentSlide / slick.options.slidesToScroll + 1
-			$('.num--first').text(
+			$('.products .num--first').text(
 				currentSlideIndex < 10 ? '0' + currentSlideIndex : currentSlideIndex
 			)
 		})
@@ -125,6 +125,14 @@ $(document).ready(function () {
 					},
 				},
 			],
+		})
+		var $sliderReviews = $('.reviews__slider')
+
+		$sliderReviews.on('afterChange', function (_, slick, currentSlide) {
+			var currentSlideIndex = currentSlide / slick.options.slidesToScroll + 1
+			$('.reviews .num--first').text(
+				currentSlideIndex < 10 ? '0' + currentSlideIndex : currentSlideIndex
+			)
 		})
 		$('.burger').click(function () {
 			$('html').toggleClass('open')

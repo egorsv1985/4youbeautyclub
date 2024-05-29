@@ -1223,3 +1223,6 @@ button {
 .slick-slide{
 	height: inherit;
 }
+.text-gray{
+	color: #a4a0a0;
+}

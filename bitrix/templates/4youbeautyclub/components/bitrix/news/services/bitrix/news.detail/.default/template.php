@@ -64,11 +64,11 @@ if ($arResult["DETAIL_PICTURE"]) {
 <? endif; ?>
 <?
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"specialists",
+	"bitrix:catalog.section.list", 
+	"specialists", 
 	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "7200",
@@ -80,7 +80,10 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "CONTENT",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0 => "NAME", 1 => "",),
+		"SECTION_FIELDS" => array(
+			0 => "NAME",
+			1 => "",
+		),
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_URL" => "",
 		"SECTION_USER_FIELDS" => array(
