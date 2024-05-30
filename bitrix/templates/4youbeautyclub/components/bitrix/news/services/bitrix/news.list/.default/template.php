@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// print_r($arResult);
 
 $SECTION = end($arResult['SECTION']['PATH']);
 $SECTION_CURRENT = array();

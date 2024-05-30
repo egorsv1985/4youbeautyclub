@@ -60,10 +60,10 @@ $APPLICATION->IncludeComponent(
 );
 ?>
 
-<?$APPLICATION->IncludeComponent(
+<? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
-	Array(
+	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 		"NEWS_COUNT" => $arParams["NEWS_COUNT"],
@@ -111,9 +111,9 @@ $APPLICATION->IncludeComponent(
 
 		"PARENT_SECTION" => $arResult["VARIABLES"]["SECTION_ID"],
 		"PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
-		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
-		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
-		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
+		"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["detail"],
+		"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
+		"IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],
 	),
 	$component
-);?>
+); ?>
