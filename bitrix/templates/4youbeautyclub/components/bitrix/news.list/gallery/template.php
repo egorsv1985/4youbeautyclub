@@ -65,7 +65,7 @@ foreach ($arResult["ITEMS"] as $arItem) :
 
 ?>
 	<div class="slider__item">
-		<div class="gallery__box d-flex justify-content-center align-items-center h-100">
+		<div class="gallery__box d-flex justify-content-center align-items-center">
 			<? if ($arItem["PREVIEW_PICTURE"]["SRC"]) : ?>
 				<picture>
 					<source srcset="<?=$arItem["PREVIEW_PICTURE"]["WEBP"]?>" type="image/webp"><img src="<?=$arItem["PREVIEW_PICTURE"]["PNG"]?>" alt="<?["PREVIEW_PICTURE"]["ALT"]?>" title="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>" class="h-auto w-100" width="376" height="365" />
