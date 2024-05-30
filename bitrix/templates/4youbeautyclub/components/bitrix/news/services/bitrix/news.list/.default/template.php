@@ -24,7 +24,7 @@ if ($arSections = $rsSections->GetNext()) {
 
 ?>
 <div class="row">
-	<div class="col-md-4 menu-container" id="menu-container">
+	<div class="col-12 col-lg-4 menu-container" id="menu-container">
 		<div class="left-menu text-lowercase">
 			<ul>
 				<?

@@ -5,10 +5,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Контакты");
 $APPLICATION->SetTitle("Контакты");
 ?>
-<section class="contacts fs-24">
+<section class="py-5 contacts fs-24">
 		<div class="row gy-4">
 			<div class="col-12 col-lg-4">
-				<h1 class="mb-5 fs-58 fw-700">Контакты</h1>
+				<h1 class="mb-5 fs-70 text-uppercase fw-700">Контакты</h1>
 				<div class="d-flex flex-column">
 					<h3 class=" text-uppercase">Адрес</h3>
 					<p><?=\Victory\Options\CVictoryOptions::getOptionValue('address_' . SITE_ID);?></p>

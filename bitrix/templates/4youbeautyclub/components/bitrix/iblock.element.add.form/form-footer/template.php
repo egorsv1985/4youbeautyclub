@@ -23,7 +23,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 	<div class="container ">
 		<div class="row">
 			<div class="col-12 col-lg-6">
-				<form class="px-5 py-5 ps-lg-0 form position-relative" name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data">
+				<form class="px-5 py-5 mb-0 ps-lg-0 form position-relative" name="iblock_add" action="<?= POST_FORM_ACTION_URI ?>" method="post" enctype="multipart/form-data">
 					<div class="gap-4 d-flex flex-column">
 						<h2 class="text-white fs-58 fw-700">Скидка на первое посещение 10%</h2>
 						<?= bitrix_sessid_post() ?>

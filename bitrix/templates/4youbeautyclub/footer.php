@@ -78,25 +78,25 @@ $APPLICATION->IncludeComponent(
 			</div>
 			<div class="col-12 col-lg-8">
 				<? $APPLICATION->IncludeComponent(
-	"bitrix:map.yandex.view", 
-	"main-map", 
-	array(
-		"COMPONENT_TEMPLATE" => "main-map",
-		"INIT_MAP_TYPE" => "MAP",
-		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:55.6960885381469;s:10:\"yandex_lon\";d:37.74040369185958;s:12:\"yandex_scale\";i:18;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:37.74084169848631;s:3:\"LAT\";d:55.6963312257396;s:4:\"TEXT\";s:25:\"ул. Любимова, 6\";}}}",
-		"MAP_WIDTH" => "100%",
-		"MAP_HEIGHT" => "475",
-		"CONTROLS" => array(
-			0 => "ZOOM",
-		),
-		"OPTIONS" => array(
-			0 => "ENABLE_DBLCLICK_ZOOM",
-		),
-		"MAP_ID" => "",
-		"API_KEY" => ""
-	),
-	false
-); ?>
+					"bitrix:map.yandex.view",
+					"main-map",
+					array(
+						"COMPONENT_TEMPLATE" => "main-map",
+						"INIT_MAP_TYPE" => "MAP",
+						"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:55.6960885381469;s:10:\"yandex_lon\";d:37.74040369185958;s:12:\"yandex_scale\";i:18;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:37.74084169848631;s:3:\"LAT\";d:55.6963312257396;s:4:\"TEXT\";s:25:\"ул. Любимова, 6\";}}}",
+						"MAP_WIDTH" => "100%",
+						"MAP_HEIGHT" => "475",
+						"CONTROLS" => array(
+							0 => "ZOOM",
+						),
+						"OPTIONS" => array(
+							0 => "ENABLE_DBLCLICK_ZOOM",
+						),
+						"MAP_ID" => "",
+						"API_KEY" => ""
+					),
+					false
+				); ?>
 			</div>
 		</div>
 	</div>
@@ -187,56 +187,57 @@ $APPLICATION->IncludeComponent(
 			<div class="modal-body">
 				<?
 				$APPLICATION->IncludeComponent(
-	"bitrix:iblock.element.add.form", 
-	"form-modal", 
-	array(
-		"AJAX_MODE" => "Y",
-		"COMPONENT_TEMPLATE" => "form-modal",
-		"STATUS_NEW" => "N",
-		"LIST_URL" => "",
-		"USE_CAPTCHA" => "N",
-		"USER_MESSAGE_EDIT" => "Спасибо, Ваша заявка успешно сохранена",
-		"USER_MESSAGE_ADD" => "Мы с вами скоро свяжемся",
-		"DEFAULT_INPUT_SIZE" => "30",
-		"RESIZE_IMAGES" => "N",
-		"IBLOCK_TYPE" => "SYSTEM",
-		"IBLOCK_ID" => "4",
-		"PROPERTY_CODES" => array(
-			0 => "3",
-			1 => "NAME",
-		),
-		"PROPERTY_CODES_REQUIRED" => array(
-			0 => "NAME",
-		),
-		"GROUPS" => array(
-			0 => "2",
-		),
-		"STATUS" => "ANY",
-		"ELEMENT_ASSOC" => "CREATED_BY",
-		"MAX_USER_ENTRIES" => "100000",
-		"MAX_LEVELS" => "100000",
-		"LEVEL_LAST" => "Y",
-		"MAX_FILE_SIZE" => "0",
-		"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
-		"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
-		"SEF_MODE" => "N",
-		"CUSTOM_TITLE_NAME" => "Ваше имя",
-		"CUSTOM_TITLE_TAGS" => "",
-		"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
-		"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
-		"CUSTOM_TITLE_IBLOCK_SECTION" => "",
-		"CUSTOM_TITLE_PREVIEW_TEXT" => "",
-		"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
-		"CUSTOM_TITLE_DETAIL_TEXT" => "",
-		"CUSTOM_TITLE_DETAIL_PICTURE" => ""
-	),
-	false
-);
+					"bitrix:iblock.element.add.form",
+					"form-modal",
+					array(
+						"AJAX_MODE" => "Y",
+						"COMPONENT_TEMPLATE" => "form-modal",
+						"STATUS_NEW" => "N",
+						"LIST_URL" => "",
+						"USE_CAPTCHA" => "N",
+						"USER_MESSAGE_EDIT" => "Спасибо, Ваша заявка успешно сохранена",
+						"USER_MESSAGE_ADD" => "Мы с вами скоро свяжемся",
+						"DEFAULT_INPUT_SIZE" => "30",
+						"RESIZE_IMAGES" => "N",
+						"IBLOCK_TYPE" => "SYSTEM",
+						"IBLOCK_ID" => "4",
+						"PROPERTY_CODES" => array(
+							0 => "3",
+							1 => "NAME",
+						),
+						"PROPERTY_CODES_REQUIRED" => array(
+							0 => "NAME",
+						),
+						"GROUPS" => array(
+							0 => "2",
+						),
+						"STATUS" => "ANY",
+						"ELEMENT_ASSOC" => "CREATED_BY",
+						"MAX_USER_ENTRIES" => "100000",
+						"MAX_LEVELS" => "100000",
+						"LEVEL_LAST" => "Y",
+						"MAX_FILE_SIZE" => "0",
+						"PREVIEW_TEXT_USE_HTML_EDITOR" => "N",
+						"DETAIL_TEXT_USE_HTML_EDITOR" => "N",
+						"SEF_MODE" => "N",
+						"CUSTOM_TITLE_NAME" => "Ваше имя",
+						"CUSTOM_TITLE_TAGS" => "",
+						"CUSTOM_TITLE_DATE_ACTIVE_FROM" => "",
+						"CUSTOM_TITLE_DATE_ACTIVE_TO" => "",
+						"CUSTOM_TITLE_IBLOCK_SECTION" => "",
+						"CUSTOM_TITLE_PREVIEW_TEXT" => "",
+						"CUSTOM_TITLE_PREVIEW_PICTURE" => "",
+						"CUSTOM_TITLE_DETAIL_TEXT" => "",
+						"CUSTOM_TITLE_DETAIL_PICTURE" => ""
+					),
+					false
+				);
 				?>
 			</div>
 		</div>
 	</div>
 </div>
+
 </body>
 
 </html>

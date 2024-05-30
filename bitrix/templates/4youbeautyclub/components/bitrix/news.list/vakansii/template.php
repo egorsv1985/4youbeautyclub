@@ -28,10 +28,34 @@ $this->setFrameMode(true);
 					<div class=" col fs-24 fw-600">
 						<div class="flex-wrap gap-2 flex-md-nowrap d-flex justify-content-between align-items-center">
 							<div class="text-uppercase"><?= $arItem["NAME"]; ?></div>
-							<a href="#" class="p-0 btn top-btn btn-arrow d-flex align-items-center fs-24">подробнее</a>
+							<button type="button" data-bs-toggle="modal" data-bs-target="#vacancy-<?= $this->GetEditAreaId($arItem['ID']); ?>" class="p-0 btn top-btn btn-arrow d-flex align-items-center fs-24">подробнее</button>
 						</div>
 					</div>
 				</li>
+				<div class="modal fade" id="vacancy-<?= $this->GetEditAreaId($arItem['ID']); ?>" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+
+								</button>
+							</div>
+							<div class="modal-body">
+								<h2 class="fs-32"><?= $arItem["NAME"]; ?></h2>
+								<div class="">
+									<?= $arItem["DETAIL_TEXT"]; ?>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<span class="fs-24 fw-700">Контакты для связи:</span>
+								<?
+								$tel = \Victory\Options\CVictoryOptions::getOptionValue('tel_' . SITE_ID);
+								?>
+								<a href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $tel); ?>" class=" fs-24 text-nowrap ps-5"><?= $tel; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			<? endforeach; ?>
 		</ul>
 	</div>
