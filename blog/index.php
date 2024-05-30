@@ -6,8 +6,8 @@ $APPLICATION->SetTitle("Полезные статьи");
 ?>
 
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"blog",
+	"bitrix:news", 
+	"blog", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Полезные статьи");
 		"CACHE_TIME" => "7200",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "j F Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_FIELD_CODE" => array(
@@ -46,11 +46,14 @@ $APPLICATION->SetTitle("Полезные статьи");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "CONTENT",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "PREVIEW_TEXT",
+			1 => "PREVIEW_PICTURE",
+			2 => "DETAIL_TEXT",
+			3 => "DETAIL_PICTURE",
+			4 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "AUTHOR",
@@ -59,7 +62,7 @@ $APPLICATION->SetTitle("Полезные статьи");
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "20",
+		"NEWS_COUNT" => "4",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
