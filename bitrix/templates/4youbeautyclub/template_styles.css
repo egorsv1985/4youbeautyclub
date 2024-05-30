@@ -515,7 +515,8 @@ footer hr {
 	line-height: 1.3em;
 }
 .fs-24,
-h3 {
+h3,
+.vakansii .modal li {
 	font-size: 1.25rem;
 	line-height: 1.3em;
 }
@@ -766,6 +767,7 @@ button {
 }
 .products {
 	background-color: #ecd9c5;
+	margin-bottom: -30px;
 	/* top: -4.625rem; */
 	padding-block: 5rem;
 }
@@ -798,8 +800,12 @@ button {
 	align-items: center;
 }
 
-.form-footer {
-	/* margin-top: -30px; */
+#page-specialists .form-footer {
+	margin-top: -3rem;
+	background-color:#212121;
+}
+#page-contacts .form-footer {
+	
 	background-color:#212121;
 }
 .form-footer .form {
@@ -937,7 +943,8 @@ button {
 }
 @media only screen and (min-width: 400px) {
 	.fs-24,
-	h3 {
+	h3,
+	.vakansii .modal li {
 		font-size: 1.5rem;
 	}
 }
@@ -1002,16 +1009,16 @@ button {
 }
 
 @media only screen and (min-width: 991px) {
-	/* .form-footer::before {
+	.form-footer .form::before {
 		content: '';
 		position: absolute;
-		top: -25px;
+		top: 0;
 		height: 100%;
-		left: 0;
-		bottom: 25px;
+		right: 100%;
+		bottom: 0;
 		background: #212121;
 		width: 100vw;
-	} */
+	}
 	.main-menu {
 		display: flex;
 		left: inherit;
@@ -1364,4 +1371,16 @@ button {
     border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
     border-bottom-right-radius: var(--bs-modal-inner-border-radius);
     border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+}
+.vakansii h3{
+	font-weight: 600;
+}
+.vakansii .modal ul{
+	margin-block: 1.5rem;
+}
+.vakansii .modal-body{
+	padding-inline: 6rem;
+}
+.specialists__slider- ~ .slick__control{
+	display: none !important;
 }

@@ -11,7 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-// print_r($arResult);
+//print_r($arResult);
 
 $this->SetViewTarget('topPage');
 if (CModule::IncludeModule("millcom.phpthumb")) {
@@ -35,24 +35,25 @@ $this->EndViewTarget();
 <div class="mb-5 fs-24">
 	<?= $arResult["DETAIL_TEXT"]; ?>
 </div>
-
 <?
-
-// $arElement = false;
 $arSelect = array("ID", "IBLOCK_ID", "NAME", "PREVIEW_PICTURE", 'PROPERTY_POST');
 $arFilter = array(
 	"IBLOCK_ID" => 3,
 	"ACTIVE" => "Y",
-
+	'ID' => $arResult['PROPERTIES']['AUTHOR']['VALUE']
 );
 $rsElements = CIBlockElement::GetList(array('SORT' => 'ASC'), $arFilter, false, false, $arSelect);
 if ($arElement = $rsElements->GetNext()) :
-	
+	if (CModule::IncludeModule("millcom.phpthumb")) {
+		$arElement["PREVIEW_PICTURE_WEBP"] = CMillcomPhpThumb::generateImg($arElement["PREVIEW_PICTURE"], 12);
+		$arElement["PREVIEW_PICTURE_PNG"] = CMillcomPhpThumb::generateImg($arElement["PREVIEW_PICTURE"], 11);
+	}
+	// print_r($arElement);
 ?>
 	<div class="gap-4 py-5 d-flex">
-		<div class="">
+		<div class="rounded-circle ">
 			<picture>
-				<source srcset="<?= $arElement["PREVIEW_PICTURE_SRC"] ?>" type="image/webp"><img src="<?= $arElement["PREVIEW_PICTURE_SRC"] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>" class="h-100 w-100" width="90" height="90" />
+				<source srcset="<?= $arElement["PREVIEW_PICTURE_WEBP"] ?>" type="image/webp"><img src="<?= $arElement["PREVIEW_PICTURE_PNG"] ?>" alt="<?= $arElement["NAME"] ?>" title="<?= $arElement["NAME"] ?>" class="h-auto w-100 rounded-circle" width="90" height="90" />
 			</picture>
 		</div>
 		<div class="gap-3 d-flex flex-column fw-600 ">

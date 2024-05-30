@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("Контакты");
 					$tel = \Victory\Options\CVictoryOptions::getOptionValue('tel_' . SITE_ID);
 					?>
 					<a href="tel:<?=str_replace(array(' ', '(', ')', '-'), '', $tel);?>" class="d-block fs-24 text-nowrap ps-5 contacts-phone"><?=$tel;?></a>
-					<a href="mailto:<?=\Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID);?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?=\Victory\Options\CVictoryOptions::getOptionValue('mail_' . SITE_ID);?></a>
+					<a href="mailto:<?=\Victory\Options\CVictoryOptions::getOptionValue('email_' . SITE_ID);?>" class="d-block text-nowrap fs-24 ps-5 contacts-mail"><?=\Victory\Options\CVictoryOptions::getOptionValue('email_' . SITE_ID);?></a>
 				</div>
 			</div>
 			<div class="col-12 col-lg-8">

@@ -16,7 +16,7 @@
 $this->setFrameMode(true);
 
 // print_r($arResult);
-$SECTION = end($arResult['SECTION']['PATH']);
+
 $SECTION_CURRENT = array();
 $SECTION_ID = ''; // Переменная для хранения ID раздела
 

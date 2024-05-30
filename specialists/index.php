@@ -1,5 +1,6 @@
 <?
 // define('TYPE_PAGE', 'SPECIALISTS');
+define('TYPE_PAGE', 'SPECIALISTS');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("title", "Специалисты");
 $APPLICATION->SetTitle("Специалисты");
@@ -8,11 +9,11 @@ $APPLICATION->SetTitle("Специалисты");
 <div class="fs-24">Мы используем передовые технологии и профессиональное оборудование для максимально эффективных и безопасных процедур. Мы гарантируем вам не только ухоженность, но и радость от каждой посещённой нами процедуры. Доверьтесь профессионалам и откройте для себя новое измерение косметологии!</div>
 <?
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"specialists",
+	"bitrix:catalog.section.list", 
+	"specialists", 
 	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "7200",
@@ -24,7 +25,10 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_ID" => "3",
 		"IBLOCK_TYPE" => "CONTENT",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0 => "NAME", 1 => "",),
+		"SECTION_FIELDS" => array(
+			0 => "NAME",
+			1 => "",
+		),
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_URL" => "",
 		"SECTION_USER_FIELDS" => array(
