@@ -183,11 +183,11 @@ $APPLICATION->IncludeComponent(
 ?>
 <?
 $APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"documents",
+	"bitrix:catalog.section.list", 
+	"documents", 
 	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "7200",
@@ -199,7 +199,10 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_ID" => "10",
 		"IBLOCK_TYPE" => "CONTENT",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0 => "NAME", 1 => "",),
+		"SECTION_FIELDS" => array(
+			0 => "NAME",
+			1 => "",
+		),
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_URL" => "",
 		"SECTION_USER_FIELDS" => array(
@@ -216,11 +219,11 @@ $APPLICATION->IncludeComponent(
 ?>
 <?
 $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"vakansii",
+	"bitrix:news.list", 
+	"vakansii", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",

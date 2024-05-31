@@ -40,18 +40,21 @@ $slideCount = count($arResult["ITEMS"]);
 		}
 	?>
 		<div class="slider__item">
-			<div class="px-3">
-				<div class="mb-4">
+			<div class="mx-3 slider__bg">
+				<div class="">
 					<picture>
 						<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp">
 						<img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="h-auto w-100" width="385" height="445" />
 					</picture>
 				</div>
-				<div class="py-1 border-2 border-black slider__content ps-4 border-start">
+				<div class="border-2 border-black  slider__content ps-4 border-start position-relative">
 					<div class="mb-2 fs-24 fw-600 text-uppercase slider__name"><?= $arItem["NAME"]; ?></div>
 					<div class="fs-24 slider__post"><?= $arItem['PROPERTIES']['POST']['VALUE']; ?></div>
 				</div>
 				<!-- <div class="fs-24 ps-4"><span>стаж </span><?= $arItem['PROPERTIES']['PERIOD']['VALUE']; ?></div> -->
+				<div class="ps-4 specialists__btn">
+					<button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24 ">Записаться</button>
+				</div>
 			</div>
 		</div>
 	<? endforeach; ?>

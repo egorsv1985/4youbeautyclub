@@ -71,6 +71,7 @@ foreach ($arResult["ITEMS"] as $arItem) :
 					<source srcset="<?=$arItem["PREVIEW_PICTURE"]["WEBP"]?>" type="image/webp"><img src="<?=$arItem["PREVIEW_PICTURE"]["PNG"]?>" alt="<?["PREVIEW_PICTURE"]["ALT"]?>" title="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>" class="h-auto w-100" width="376" height="365" />
 				</picture>				
 			<? else : ?>
+				
 				<p><?=$arItem["PREVIEW_TEXT"]?></p>
 			<? endif ?>
 		</div>
