@@ -39,7 +39,7 @@ $this->setFrameMode(true);
 								<div class="col-12 col-lg-8 position-relative d-none d-xl-block">
 									<div class="position-relative h-100">
 										<picture>
-											<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="bottom-0 h-auto position-absolute w-100" width="595" height="380" />
+											<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" title="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="bottom-0 h-100 position-absolute w-100" width="595" height="380" />
 										</picture>
 									</div>
 								</div>
