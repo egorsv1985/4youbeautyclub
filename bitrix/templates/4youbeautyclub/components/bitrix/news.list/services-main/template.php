@@ -123,12 +123,14 @@ while ($arSection = $rsSections->GetNext()) {
 				foreach ($chunkedItems as $key => $items) :
 				?>
 					<div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
-						<div class="row">
+						<div class="row g-3">
 							<? foreach ($items as $index => $item) : ?>
 								<? $colClass = ($index === 0 || $index === 3) ? 'col-md-7' : 'col-md-5'; ?>
-								<a href="<?= $item['DETAIL_PAGE_URL'] ?? $item['SECTION_PAGE_URL'] ?>" class="mb-3 services-link <?= $colClass ?> position-relative" style="height: 350px; background: url('<?= $item['IMAGE_URL'] ?>') no-repeat 50% 50% / 98% 100%;">
-									<div class="label fs-32 fs-500 text-uppercase"><?= $item['NAME'] ?></div>
-								</a>
+								<div class="<?= $colClass ?>">
+									<a href="<?= $item['DETAIL_PAGE_URL'] ?? $item['SECTION_PAGE_URL'] ?>" class="services-link d-flex align-items-end position-relative" style="height: 350px; background-image: url('<?= $item['IMAGE_URL'] ?>'); ">
+										<div class="label fs-32 fw-500 text-uppercase position-relative"><?= str_replace(' ', '<br>', $item['NAME']); ?></div>
+									</a>
+								</div>
 							<? endforeach; ?>
 						</div>
 					</div>
@@ -150,7 +152,7 @@ while ($arSection = $rsSections->GetNext()) {
 				<? foreach ($result['ITEMS'] as $key => $item) : ?>
 					<div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
 						<div class="row">
-							<a href="<?= $item['DETAIL_PAGE_URL'] ?? $item['SECTION_PAGE_URL'] ?>" class="mb-3 services-link col-12 position-relative" style="height: 350px; background: url('<?= $item['IMAGE_URL'] ?>') no-repeat 50% 50% / 98% 100%;">
+							<a href="<?= $item['DETAIL_PAGE_URL'] ?? $item['SECTION_PAGE_URL'] ?>" class="mb-3 services-link col-12 d-flex align-items-end position-relative" style="height: 350px; background-image: url('<?= $item['IMAGE_URL'] ?>');">
 								<div class="label fs-32 fs-500 text-uppercase"><?= $item['NAME'] ?></div>
 							</a>
 						</div>

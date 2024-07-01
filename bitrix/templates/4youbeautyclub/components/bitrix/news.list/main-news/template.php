@@ -55,7 +55,7 @@ $this->setFrameMode(true);
 				</div>
 			</div>
 			<div class="d-lg-none btns">
-				<a href="#" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Все статьи</a>
+				<a href="/blog/" class="px-4 py-3 btn btn-outline-dark top-btn btn-arrow fs-24">Все статьи</a>
 			</div>
 		</div>
 	</div>
